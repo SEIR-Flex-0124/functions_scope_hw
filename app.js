@@ -26,8 +26,12 @@ console.log(calculateCube(5)); //I'm expecting 125
 
 // 3. isAVowel
 function isAVowel(letter) {
-    // YOUR CODE HERE
+    if (letter.toLowerCase() === 'a' || letter.toLowerCase() === 'e' || letter.toLowerCase() === 'i' || letter.toLowerCase() === 'o' || letter.toLowerCase() === 'u') return true;
+    return false;
 }
+console.log(isAVowel('A')); // I'm expecting true
+console.log(isAVowel('i')); // I'm expecting true
+console.log(isAVowel('d')); // I'm expecting false
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
