@@ -50,7 +50,7 @@ function getTwoLengths(word1, word2) {
     return[word1.length, word2.length];
 }
 
-let lengths = getTwoLengths("Dolores", "code");
+let lengths = getTwoLengths("Hank", "Hippopopalous");
 console.log(lengths);
 
 
