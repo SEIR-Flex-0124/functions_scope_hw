@@ -6,66 +6,69 @@
 
 // 2. calculateCube
 function calculateCube(num) {
-    return num ** 3
+  return num ** 3
 }
-console.log (calculateCube (3));
+console.log(calculateCube(5))
 // 3. isAVowel
-function isAVowel(letter) {
-        return letter ["a"];
-        let a == a
+function isAVowel(vowel) {
+  if (vowel === 'a' || vowel === 'A') {
+    return true
+  } else {
+    return false
+  }
 }
-console.log(isAVowel("a"));
+console.log(isAVowel("a"))
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 }
 
 // 5. sumArray
 function sumArray(arr) {
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 }
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 }
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 }
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 }
 
 // BONUS!
 
 // 8. eulerFibo
 function eulerFibo(num) {
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 }
 
 // 9. findNeedle
 function findNeedle(arr) {
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 }
 
 // 10. sumPositive
 function sumPositive(arr) {
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 }
 
 module.exports = {
-    calculateCube,
-    isAVowel,
-    getTwoLengths,
-    sumArray,
-    checkPrime,
-    printPrimes,
-    printLongestWord,
-    eulerFibo,
-    findNeedle,
-    sumPositive
-};
+  calculateCube,
+  isAVowel,
+  getTwoLengths,
+  sumArray,
+  checkPrime,
+  printPrimes,
+  printLongestWord,
+  eulerFibo,
+  findNeedle,
+  sumPositive
+}
