@@ -18,8 +18,11 @@ Return will stop the execution of the function and return the specified value (n
 
 // 2. calculateCube
 function calculateCube(num) {
-    // YOUR CODE HERE
+    return num * num * num;
 }
+console.log(calculateCube(2)); //I'm expecting 8
+console.log(calculateCube(3)); //I'm expecting 27
+console.log(calculateCube(5)); //I'm expecting 125
 
 // 3. isAVowel
 function isAVowel(letter) {
