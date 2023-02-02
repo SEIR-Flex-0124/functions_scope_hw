@@ -6,23 +6,47 @@
 
 // 2. calculateCube
 function calculateCube(num) {
+    return num ** 3;
     // YOUR CODE HERE
 }
 
+// console.log(calculateCube(3))
+
+
 // 3. isAVowel
+// I just googled 'check element in array' and found includes in W3school..
 function isAVowel(letter) {
+    let vowelArray = ['a','e','i','o','u','A','E','I','O','U'];
+    if (vowelArray.includes(letter)){
+        return true;
+    } else {
+        return false;
+    }
     // YOUR CODE HERE
 }
+
+// console.log(isAVowel('a'));
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
+    // console.log(`(${word1.length} , ${word2.length})`);
+    return (`(${word1.length} , ${word2.length})`);
     // YOUR CODE HERE
 }
 
+// console.log(getTwoLengths('hello','123'));
+
 // 5. sumArray
 function sumArray(arr) {
+    sum = 0;
+    for (let i=0;i<arr.length;i++){
+        sum += arr[i];
+    }
+    return sum
     // YOUR CODE HERE
 }
+
+// console.log(sumArray([1,2,3,4,5]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
