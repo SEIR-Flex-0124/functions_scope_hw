@@ -1,13 +1,14 @@
 // 1.1. What is the difference between a parameter and an argument?
-
+//
 // 1.2. Within a function, what is the difference between return and console.log?
 
 // 1. 3. What are the implications of the ability of a function to return a value?
 
 // 2. calculateCube
 function calculateCube(num) {
-    // YOUR CODE HERE
+   return num ** 3;
 }
+console.log(calculateCube(5));
 
 // 3. isAVowel
 function isAVowel(letter) {
