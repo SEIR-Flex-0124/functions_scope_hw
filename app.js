@@ -17,8 +17,8 @@ console.log(calculateCube(5));
 
 // 3. isAVowel
 function isAVowel(letter) {
-    let vowelAnswer = "";
-    if(letter = "a" || "e" || "i" || "o" || "u") {
+    var vowelAnswer = 0;
+    if(letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u") {
         vowelAnswer = "true";
     }
     else {
