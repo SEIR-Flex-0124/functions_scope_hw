@@ -1,8 +1,20 @@
 // 1.1. What is the difference between a parameter and an argument?
 
+/*
+A parameter is one of the variables within a function. They are basically placeholders for the function arguements. An arugement is the actual value you insert into a method's parameters.
+*/
+
 // 1.2. Within a function, what is the difference between return and console.log?
 
+/*
+Return will stop the execution of the function and return the specified value (not in the console), which will then allow you to use and manipulate that value in other parts of the program. console.log is a print statement and displays the input in the console.
+*/
+
 // 1. 3. What are the implications of the ability of a function to return a value?
+
+/*
+Return will stop the execution of the function and return the specified value (not in the console), which will then allow you to use and manipulate that value in other parts of the program.
+*/
 
 // 2. calculateCube
 function calculateCube(num) {
