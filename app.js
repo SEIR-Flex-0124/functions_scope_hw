@@ -1,9 +1,11 @@
 // 1.1. What is the difference between a parameter and an argument?
-
+// a parameter is what is written inside of the function. 
+// an argument is passing the value to the function when it invokes.
 // 1.2. Within a function, what is the difference between return and console.log?
-
+// return is returning value to the output. return ends function.
+// console.log is prinnting out value on the screen.
 // 1. 3. What are the implications of the ability of a function to return a value?
-
+// We oftenly have to use user's input as a function variable so that we can use them.
 // 2. calculateCube
 function calculateCube(num) {
     return num ** 3;
@@ -16,7 +18,7 @@ function calculateCube(num) {
 // 3. isAVowel
 // I just googled 'check element in array' and found includes in W3school..
 function isAVowel(letter) {
-    let vowelArray = ['a','e','i','o','u','A','E','I','O','U'];
+    const vowelArray = ['a','e','i','o','u','A','E','I','O','U'];
     if (vowelArray.includes(letter)){
         return true;
     } else {
@@ -69,10 +71,34 @@ function checkPrime(num) {
 
 console.log(checkPrime(19));
 
+
+// according to my research 1 is not prime number.
+
 // 6.2 printPrimes
 function printPrimes(num) {
+    let numArray = [];
+
+    for (n=2;n<num;n++){
+        numArray.push(n);
+    }
+    //numArray for holding numbers before num
+    //checking elemnets in numArray weather primenum or not.
+
+    // for (i=0; i<numArray.length; i++){ 
+    //     (checkPrime(numArray[i]) == true) 
+    //     printArray.push(numArray[i]);
+    // }
+    let printArray = [];
+    numArray.forEach((numP) => { 
+        if (checkPrime(numP) == true) {
+            printArray.push(numP);
+        }
+    });
+    return printArray;
     // YOUR CODE HERE
 }
+console.log(printPrimes(10));
+
 
 // 7. printLongestWord
 function printLongestWord(arr) {
