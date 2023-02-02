@@ -35,8 +35,11 @@ console.log(isAVowel('d')); // I'm expecting false
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
-}
+    return [word1.length, word2.length];
+  }
+  console.log(getTwoLengths('array', 'object')); // I'm expecting [5, 6]
+  console.log(getTwoLengths('JavaScript', 'Java')); // I'm expecting [10, 4]
+  console.log(getTwoLengths('General', 'Assembly')); // I'm expecting [7, 8]
 
 // 5. sumArray
 function sumArray(arr) {
