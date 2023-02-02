@@ -8,8 +8,10 @@
 //lets you use th output in another function
 // 2. calculateCube
 function calculateCube(num) {
-    // YOUR CODE HERE
+    return num ** 3   
 }
+console.log(calculateCube(2))
+
 
 // 3. isAVowel
 function isAVowel(letter) {
