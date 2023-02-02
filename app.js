@@ -1,8 +1,11 @@
 // 1.1. What is the difference between a parameter and an argument?
+// A parameter is a placeholder for the arguments, The arguments are data to be passed through the function
 
 // 1.2. Within a function, what is the difference between return and console.log?
+// console.log is used to print the output in javascript, return is used to specify a value a function should return when it is called
 
-// 1. 3. What are the implications of the ability of a function to return a value?
+// 1. 3. What are the implications of the ability of a function to return a value? 
+// They allow us to simplify our code, break up programs into more manageable blocks of code, We can reuse them through out the program so we dont have to repeat ourselves. D.R.Y. Helps with debuging because when we name the fuctions semantically we will know what part of the code isnt working and where to find it if a problem occurs.
 
 // 2. calculateCube
 function calculateCube(num) {
