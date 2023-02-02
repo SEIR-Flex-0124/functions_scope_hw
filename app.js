@@ -97,13 +97,21 @@ function printPrimes(num) {
     return printArray;
     // YOUR CODE HERE
 }
-console.log(printPrimes(10));
-
+// console.log(printPrimes(10));
 
 // 7. printLongestWord
 function printLongestWord(arr) {
+    for (i=0;i<arr.length;i++){
+        for (j=1;j<arr.length-1;j++) {
+            if (arr[i].length >= arr[j].length){
+                return arr[i];
+            }       }
+    }
+    
     // YOUR CODE HERE
 }
+
+console.log(printLongestWord(['apple','orange','banana']))
 
 // BONUS!
 
