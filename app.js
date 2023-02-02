@@ -50,8 +50,24 @@ function sumArray(arr) {
 
 // 6.1 checkPrime
 function checkPrime(num) {
+    numArray = [];
+    for (i=2;i<num;i++){
+        numArray.push(i);
+    }
+    // return numArray;
+    newArray = [];
+    for (i=0;i<numArray.length;i++) {
+        newArray.push(num % numArray[i]);
+    } 
+    if (newArray.includes(0)){
+        return false;
+    } else {
+        return true;
+    }
     // YOUR CODE HERE
 }
+
+console.log(checkPrime(19));
 
 // 6.2 printPrimes
 function printPrimes(num) {
@@ -92,3 +108,6 @@ module.exports = {
     findNeedle,
     sumPositive
 };
+
+
+
