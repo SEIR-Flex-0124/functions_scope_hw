@@ -1,13 +1,15 @@
-// 1.1. What is the difference between a parameter and an argument?
-A parameter is what comes in the parentheses after the function declaration, defining the variables; an argument is the actual stuff you're inputting when you run the function.
-// 1.2. Within a function, what is the difference between return and console.log?
-console.log prints something to the console after the function has run; return is what's returning the actual output of the function.
-// 1. 3. What are the implications of the ability of a function to return a value?
+// // 1.1. What is the difference between a parameter and an argument?
+// A parameter is what comes in the parentheses after the function declaration, defining the variables; an argument is the actual stuff you're inputting when you run the function.
+// // 1.2. Within a function, what is the difference between return and console.log?
+// console.log prints something to the console after the function has run; return is what's returning the actual output of the function.
+// // 1. 3. What are the implications of the ability of a function to return a value?
+// When the function completes, the new value is returned.
 
 // 2. calculateCube
 function calculateCube(num) {
-    // YOUR CODE HERE
-}
+    return Math.pow(num, 3);
+};
+console.log(calculateCube(5));
 
 // 3. isAVowel
 function isAVowel(letter) {
