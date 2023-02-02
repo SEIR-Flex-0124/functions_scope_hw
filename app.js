@@ -11,9 +11,10 @@ function calculateCube(num) {
 console.log (calculateCube (3));
 // 3. isAVowel
 function isAVowel(letter) {
-    // YOUR CODE HERE
+        return letter ["a"];
+        let a == a
 }
-
+console.log(isAVowel("a"));
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
     // YOUR CODE HERE
