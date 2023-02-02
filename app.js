@@ -9,8 +9,11 @@
 
 // 2. calculateCube
 function calculateCube(num) {
-    // YOUR CODE HERE
+    let cubeResult = num*num*num;
+    //console.log(cubeResult);
+    return cubeResult;
 }
+console.log(calculateCube(5));
 
 // 3. isAVowel
 function isAVowel(letter) {
