@@ -1,7 +1,7 @@
 // 1.1. What is the difference between a parameter and an argument?
-
+//A parameter is something we add to a function, and an argument is the actual value for the function when it's invoked.
 // 1.2. Within a function, what is the difference between return and console.log?
-
+//Return doesn't print out the value, it just defines it or gives it it's value. Console.log will print out our function.
 // 1. 3. What are the implications of the ability of a function to return a value?
 
 // 2. calculateCube
