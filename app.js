@@ -28,7 +28,12 @@ console.log(isAVowel("a"));
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
     // YOUR CODE HERE
+    let a = Array.from(word1).length;
+    let b = Array.from(word2).length;
+    return [a,b]
 }
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+
 
 // 5. sumArray
 function sumArray(arr) {
