@@ -113,10 +113,9 @@ function eulerFibo(num) {
     }
     return sum;
 }
-console.log(eulerFibo(100));
+console.log(eulerFibo(3524550)); // Bonus Answer Sum of Even numbers that do not exceed 4 million is 1,089,154
 
 
-// function evenNumbers(arr)
 // 9. findNeedle
 function findNeedle(arr) {
     // YOUR CODE HERE
