@@ -50,7 +50,17 @@ console.log(sumArray([1, 2, 3, 4, 5, 6]));
 // 6.1 checkPrime
 function checkPrime(num) {
     // YOUR CODE HERE
+    if (num <= 1) { // Checks is num is equal to 1 or less than
+        return false;
+    }
+    for (let i = 2; i<= Math.sqrt(num); i++) { // loops from 2 to the square root of the argument
+        if (num % i === 0) { // checks if remainder is equal to 0 
+            return false;
+        }
+    }
+    return true;
 }
+console.log(checkPrime(97));
 
 // 6.2 printPrimes
 function printPrimes(num) {
