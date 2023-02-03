@@ -77,7 +77,7 @@ printPrimes(97);
 function printLongestWord(arr) {
     // YOUR CODE HERE
     let word = " "
-    for (i = 0; i < arr.length; i++) {
+    for (i = 1; i < arr.length; i++) {
         if (arr[i].length > word.length) {
             word = arr[i];
         }
@@ -91,8 +91,22 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 // 8. eulerFibo
 function eulerFibo(num) {
     // YOUR CODE HERE
+    let num1 = 0
+    let num2 = 1
+    let num3 = 0
+    for (i = 0; i <= num; i++) {
+        console.log(num1);
+        num3 = num1 + num2;
+        num1 = num2;
+        num2 = num3;
+        if (num1 >= num) {
+            return;
+        }
+    }
 }
+eulerFibo(100);
 
+function evenNumbers
 // 9. findNeedle
 function findNeedle(arr) {
     // YOUR CODE HERE
