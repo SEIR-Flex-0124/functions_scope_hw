@@ -119,7 +119,13 @@ console.log(eulerFibo(3524550)); // Bonus Answer Sum of Even numbers that do not
 // 9. findNeedle
 function findNeedle(arr) {
     // YOUR CODE HERE
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] === 'needle') { // Searches Array for 'needle' 
+            return (`Found needle at position ${i}`);
+        }
+    }
 }
+console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']));
 
 // 10. sumPositive
 function sumPositive(arr) {
