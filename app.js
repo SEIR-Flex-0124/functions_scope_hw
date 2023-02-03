@@ -65,9 +65,9 @@ console.log(checkPrime(97));
 // 6.2 printPrimes
 function printPrimes(num) {
     // YOUR CODE HERE
-    for (let i = 2; i<= num; i++) {
-        if (checkPrime(i)) {
-            console.log(i);
+    for (let i = 2; i<= num; i++) { 
+        if (checkPrime(i)) { // Checks if number is prime
+            console.log(i); // if Prime number is printed
         }
     }
 }
@@ -78,7 +78,7 @@ function printLongestWord(arr) {
     // YOUR CODE HERE
     let word = " "
     for (i = 1; i < arr.length; i++) {
-        if (arr[i].length > word.length) {
+        if (arr[i].length > word.length) { // Compares current index to the last longest word
             word = arr[i];
         }
     }
@@ -91,22 +91,29 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 // 8. eulerFibo
 function eulerFibo(num) {
     // YOUR CODE HERE
-    let num1 = 0
-    let num2 = 1
-    let num3 = 0
+    let num1 = 0;
+    let num2 = 1;
+    let num3 = 0;
+    let arr = [];
     for (i = 0; i <= num; i++) {
-        console.log(num1);
+       // console.log(num1);
+        if (num1 % 2 === 0) { // Checks if number is even
+            arr.push(num1); // pushes even number into array
+        }
         num3 = num1 + num2;
         num1 = num2;
         num2 = num3;
         if (num1 >= num) {
-            return;
+            break;
         }
-    }
+        
+    } 
+    return arr;
 }
-eulerFibo(100);
+console.log(eulerFibo(100));
 
-function evenNumbers
+
+// function evenNumbers(arr)
 // 9. findNeedle
 function findNeedle(arr) {
     // YOUR CODE HERE
