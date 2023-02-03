@@ -106,9 +106,12 @@ function eulerFibo(num) {
         if (num1 >= num) {
             break;
         }
-        
-    } 
-    return arr;
+    }  
+    let sum = 0;
+    for (i = 0; i < arr.length; i++) { // Loops array adding each index to variable sum
+        sum += arr[i]; 
+    }
+    return sum;
 }
 console.log(eulerFibo(100));
 
