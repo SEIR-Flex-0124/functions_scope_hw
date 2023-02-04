@@ -43,8 +43,15 @@ function getTwoLengths(word1, word2) {
 
 // 5. sumArray
 function sumArray(arr) {
-    // YOUR CODE HERE
-}
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+     sum += arr[i];
+    }
+    return sum;
+ }
+ console.log(sumArray([1, 2, 3])); // I'm expecting 6
+ console.log(sumArray([-10, 0, 4, 30])); // I'm expecting 24
+ console.log(sumArray([1.2, 3.5])); // I'm expecting 4.7
 
 // 6.1 checkPrime
 function checkPrime(num) {
