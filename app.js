@@ -10,18 +10,22 @@
 function calculateCube(num) {
     return num ** 3   
 }
-console.log(calculateCube(2))
+console.log(calculateCube(4))
 
 
 // 3. isAVowel
 function isAVowel(letter) {
-    // YOUR CODE HERE
+    const vowels = ['a', 'e',  'i', 'o', 'u'];
+    for (let i = 0; i < vowels.length; i++){
+        if (letter === vowels[i]) return true;
+    }
+        return false
 }
 
+console.log(isAVowel('i'))
+
 // 4. getTwoLengths
-function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
-}
+
 
 // 5. sumArray
 function sumArray(arr) {
