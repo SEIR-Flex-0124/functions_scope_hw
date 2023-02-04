@@ -26,12 +26,14 @@ function isAVowel(letter) {
     }
     return vowelAnswer;
 }
-console.log(isAVowel("a"));
+console.log(isAVowel("b"));
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
+    let wordLengths = [word1.length, word2.length];
+    return wordLengths;
 }
+console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 // 5. sumArray
 function sumArray(arr) {
