@@ -21,13 +21,12 @@
 // The ability of a function to return a value has implications for code reusability, abstraction, composition, clarity, and performance. 
 // It is a key aspect of writing efficient, modular, and maintainable programs.
 
-// eg.
-//
-//
-//
-//
-//
-//
+// eg. Reusability: we can use a function multiple times
+// Abstraction: a function can centralize the informations of a complex calculation to make the code easier to read.
+// Composition: we can combine multiple functions in order to return a final value
+// Clarity: As explained before, the functions that return values can make the code more readable and clear for all the coders that are going to read it.
+// It reduce also the quantity of data.
+
 
 // 2. calculateCube
 function calculateCube(num) {
@@ -42,7 +41,7 @@ function isAVowel(letter) {
 }
 
 console.log(isAVowel("a")); // we call isAVowel fonction to see if "a" is a vowel, if it is, the fct return "true"
-console.log(isAVowel("b")); // if "letter" is not a vowel, the fct return, "false"
+//console.log(isAVowel("b")); // if "letter" is not a vowel, the fct return, "false"
 
 
 // 4. getTwoLengths
@@ -56,13 +55,19 @@ console.log(lengths);
 
 // 5. sumArray
 function sumArray(arr) {
-    // YOUR CODE HERE
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
 }
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    // YOUR CODE HERE
+ // YOUR CODE HERE
 }
+
 
 // 6.2 printPrimes
 function printPrimes(num) {
@@ -70,9 +75,17 @@ function printPrimes(num) {
 }
 
 // 7. printLongestWord
-function printLongestWord(arr) {
-    // YOUR CODE HERE
+function printlongestWord(arr) {
+    let longestWord = "";
+    for (let i = O; i < arr.lenght; i++) {
+        if (arr[i].lenght > longestWord.length) {
+            longestWord = arr[i];
+        }
+    }
+    return longestWord
 }
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+
 
 // BONUS!
 
