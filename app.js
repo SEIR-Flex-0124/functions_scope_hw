@@ -11,16 +11,21 @@ function calculateCube(num) {
 console.log(calculateCube(5));
 
 // 3. isAVowel
-isAVowel("a")
-function isAVowel(letter) {
-    if(letter === "a" ) {
-        console.log(true)
-    } else {
-        console.log(false)
-    };
-    // console.log(isAVowel("a"));
-    // console.log(`Letter ${letter} is a vowel`) 
+
+function isAVowel(character) {
+     const vowels = ["a", "e", "i","o", "u"];
+     for(i = 0; i < vowels.length; i++) {
+        if (character.toLowerCase() === vowels[i]) {
+            return true;
+        }
+     } 
+     return false;
 };
+console.log(isAVowel("a"));
+// console.log(isAVowel("e"));
+// console.log(isAVowel("b"));
+// console.log(isAVowel("r"));
+// console.log(isAVowel("t"));
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
@@ -32,10 +37,17 @@ function getTwoLengths(word1, word2) {
 }
 
 console.log(getTwoLengths("Hank", "Hippopopalous"));
+
 // 5. sumArray
 function sumArray(arr) {
+    const array = [11, 22, 33, 44, 55, 66];
+
+    for (i = 0; i < array.length; i++) {
+        sumArray += array[i];
+    }
     // YOUR CODE HERE
 }
+console.log(sumArray([11, 22, 33, 44, 55, 66]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
