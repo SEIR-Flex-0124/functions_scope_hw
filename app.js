@@ -24,10 +24,14 @@ function isAVowel(letter) {
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
-    
+    const arrayLength = [];
+    arrayLength.push(word1.length);
+    arrayLength.push(word2.length);
+    return arrayLength;
     // YOUR CODE HERE
 }
 
+console.log(getTwoLengths("Hank", "Hippopopalous"));
 // 5. sumArray
 function sumArray(arr) {
     // YOUR CODE HERE
