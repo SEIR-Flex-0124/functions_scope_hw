@@ -96,9 +96,18 @@ function printPrimes(num) {
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    // YOUR CODE HERE
-}
-
+    let longestWord = "";
+    for (let i = 0; i < arr.length; i++) {
+      if(longestWord.length < arr[i].length) {
+        longestWord = arr[i];
+      }
+    }
+    return longestWord;
+  }
+  console.log(printLongestWord(['village', 'a', 'smoke', 'chin', 'catalogue'])); // I'm expecting catalogue
+  console.log(printLongestWord(['style', 'truck', 'right', 'quiet'])); // I'm expecting style
+  console.log(printLongestWord(['window', 'laser', 'helpless', 'see', 'it', 'army', 'onomatopoeia'])); // I'm expecting onomatopoeia
+  
 // BONUS!
 
 // 8. eulerFibo
