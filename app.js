@@ -22,7 +22,7 @@ function isAVowel(character) {
      return false;
 };
 console.log(isAVowel("a"));
-// console.log(isAVowel("e"));
+// console.log(isAVowel("E"));
 // console.log(isAVowel("b"));
 // console.log(isAVowel("r"));
 // console.log(isAVowel("t"));
@@ -39,15 +39,18 @@ function getTwoLengths(word1, word2) {
 console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 // 5. sumArray
-function sumArray(arr) {
-    const array = [11, 22, 33, 44, 55, 66];
 
-    for (i = 0; i < array.length; i++) {
-        sumArray += array[i];
+function sumArray(arr) {
+    let sum = 0;
+    for (i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
+    return sum;
     // YOUR CODE HERE
 }
 console.log(sumArray([11, 22, 33, 44, 55, 66]));
+console.log(sumArray([156, 245, 367, 478, 589, 690]));
+
 
 // 6.1 checkPrime
 function checkPrime(num) {
