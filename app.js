@@ -40,11 +40,17 @@ console.log(sumArray([1, 2, 3, 4, 5, 6]));
 // 6.1 checkPrime
 function checkPrime(num) {
     // YOUR CODE HERE
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++) {
+        if(num % i === 0) return false;
+    }
+    return num > 1;
 }
+console.log(checkPrime(7));
 
 // 6.2 printPrimes
 function printPrimes(num) {
     // YOUR CODE HERE
+    
 }
 
 // 7. printLongestWord
