@@ -11,9 +11,22 @@
 //The implications of a function to return a value will impact the rest of the code as the return of the function will change the way the code works from that point on.
 
 // 2. calculateCube
+
+// Write a function `calculateCube` that takes a single number and prints the volume of a cube made from that number.
+
+// ```javascript
+// console.log(calculateCube(5));
+// ```
+
+// > => 125
 function calculateCube(num) {
     // YOUR CODE HERE
+return num * num * num;
 }
+
+calculateCube(3);
+
+console.log(calculateCube(3));
 
 // 3. isAVowel
 function isAVowel(letter) {
