@@ -100,8 +100,26 @@ function printLongestWord(arr) {
 
 // 8. eulerFibo
 function eulerFibo(num) {
-    // YOUR CODE HERE
+  // Initialize variables `prev` and `curr` to the first two numbers in the Fibonacci sequence
+  let prev = 1;
+  let curr = 2;
+  let sum = 0; // Initialize variable `sum` to 0
+  let total = 0; // Initialize variable `total` to 0
+  for (let i = 0; curr <= num; i++) { // Use a for loop to generate the next number in the Fibonacci sequence
+    if (curr % 2 === 0) total += curr; // If the current number is even, add it to the running total
+    
+    // Here we calculate the next number in the Fibonacci sequence
+    sum = prev + curr;
+    prev = curr; // `prev`is assigned to be the value of `curr`. This way 'prev`will be use in the next iteration of the loop
+    curr = sum;  // `curr` is define as teh value of `sum` so as the last number in the sequence, it will be use for the next iteration of the loop
+  }
+  // Return the sum of all even numbers in the Fibonacci sequence that do not exceed the input `num`
+  return total;
 }
+
+// Console.log the result of calling `eulerFibo` with 4 million as the input
+console.log(eulerFibo(4000000));
+
 
 // 9. findNeedle
 function findNeedle(arr) {
@@ -115,8 +133,18 @@ console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'rand
 
 // 10. sumPositive
 function sumPositive(arr) {
-    // YOUR CODE HERE
+    let positiveSum = 0  // initial value of the variable is 0
+    for (let i = 0; i < arr.length; i++) {  // at the start we are at 0 and the loop continue as long as we are not at the end of the array. + "i" is incremented by 1 at each iteration
+        if (arr[i] > 0) {   // if "arr[i]"" is positive the next line will be executed
+            positiveSum += arr[i]; // We will add the current element of the array to the "positiveSum"
+        } 
+    }
+    return positiveSum;
 }
+    
+const arr = [1, -4, 7, 12]; // the input array that will used for the console.log
+console.log(sumPositive(arr));
+
 
 module.exports = {
     calculateCube,
