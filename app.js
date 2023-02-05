@@ -11,13 +11,20 @@ function calculateCube(num) {
 console.log(calculateCube(5));
 
 // 3. isAVowel
-isAVowel("A")
+isAVowel("a")
 function isAVowel(letter) {
-    console.log(`Letter ${letter} is a vowel`) 
-}
+    if(letter === "a" ) {
+        console.log(true)
+    } else {
+        console.log(false)
+    };
+    // console.log(isAVowel("a"));
+    // console.log(`Letter ${letter} is a vowel`) 
+};
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
+    
     // YOUR CODE HERE
 }
 
