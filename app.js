@@ -1,9 +1,9 @@
 // 1.1. What is the difference between a parameter and an argument?
-
+// a parameter is the variable in the function & arguements are values that are declared within a function when the function is called
 // 1.2. Within a function, what is the difference between return and console.log?
-
+// return exits a function & the console log prints your code
 // 1. 3. What are the implications of the ability of a function to return a value?
-
+// to return the value for the code written
 // 2. calculateCube
 function calculateCube(num) {
     // YOUR CODE HERE
