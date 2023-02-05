@@ -29,9 +29,21 @@ calculateCube(3);
 console.log(calculateCube(3));
 
 // 3. isAVowel
+// Write a function `isAVowel` that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case.
 function isAVowel(letter) {
     // YOUR CODE HERE
+    const vowels = ["a","e","i","o","u"];
+    for(let i=0; i<vowels.length; i++){
+        if(letter.toLowerCase() === vowels[i]){
+            return true;
+        }
+    }
+    return false;
 }
+console.log(isAVowel("A"));
+console.log(isAVowel("c"));
+console.log(isAVowel("E"));
+console.log(isAVowel("h"));
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
