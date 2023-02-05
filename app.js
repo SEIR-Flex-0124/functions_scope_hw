@@ -11,8 +11,9 @@ function calculateCube(num) {
 console.log(calculateCube(5));
 
 // 3. isAVowel
+isAVowel("A")
 function isAVowel(letter) {
-    // YOUR CODE HERE
+    console.log(`Letter ${letter} is a vowel`) 
 }
 
 // 4. getTwoLengths
