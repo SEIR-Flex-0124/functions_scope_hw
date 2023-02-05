@@ -10,7 +10,7 @@ A parameter is one of the variables within a function. They are basically placeh
 Return will stop the execution of the function and return the specified value (not in the console), which will then allow you to use and manipulate that value in other parts of the program. console.log is a print statement and displays the input in the console.
 */
 
-// 1. 3. What are the implications of the ability of a function to return a value?
+// 1.3. What are the implications of the ability of a function to return a value?
 
 /*
 Return will stop the execution of the function and return the specified value (not in the console), which will then allow you to use and manipulate that value in other parts of the program.
@@ -26,8 +26,11 @@ console.log(calculateCube(5)); //I'm expecting 125
 
 // 3. isAVowel
 function isAVowel(letter) {
-    if (letter.toLowerCase() === 'a' || letter.toLowerCase() === 'e' || letter.toLowerCase() === 'i' || letter.toLowerCase() === 'o' || letter.toLowerCase() === 'u') return true;
-    return false;
+    if (letter.toLowerCase() === 'a' || letter.toLowerCase() === 'e' || letter.toLowerCase() === 'i' || letter.toLowerCase() === 'o' || letter.toLowerCase() === 'u') {
+        return true;
+    } else {
+        return false;
+    }
 }
 console.log(isAVowel('A')); // I'm expecting true
 console.log(isAVowel('i')); // I'm expecting true
@@ -43,7 +46,7 @@ function getTwoLengths(word1, word2) {
 
 // 5. sumArray
 function sumArray(arr) {
-    let sum = 0
+    let sum = 0;
     for (let i = 0; i < arr.length; i++) {
      sum += arr[i];
     }
@@ -55,13 +58,41 @@ function sumArray(arr) {
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    // YOUR CODE HERE
-}
+    if(num < 0) {
+      return 'You must choose a positive number'
+    } else if(num % 1 !== 0) {
+      return 'You must choose an integer'
+    } else if(num === 0 || num === 1) {
+      return false;
+    } else {
+       for(let i = 2; i < num; i++) {
+          if(num % i === 0) {
+          return false;
+      } 
+    }
+    return true;
+   } 
+  }
+  console.log(checkPrime(-10)); // I'm expecting 'You must choose a positive number'
+  console.log(checkPrime(1.5)); // I'm expecting 'You must choose an integer'
+  console.log(checkPrime(1)); // I'm expecting false
+  console.log(checkPrime(3)); // I'm expecting true
+  console.log(checkPrime(25)); // I'm expecting false
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    // YOUR CODE HERE
-}
+    let arrOfPrimes = [];
+    for(let i = 2; i <= num; i++) {
+      if(checkPrime(i)) {
+        arrOfPrimes.push(i);
+      }
+    }
+    return arrOfPrimes;
+  }
+  console.log(printPrimes(1)); // I'm expecting an empty array
+  console.log(printPrimes(1.5)); // I'm expecting an empty array
+  console.log(printPrimes(5)); // I'm expecting [2, 3, 5]
+  console.log(printPrimes(90)); // I'm expecting [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89]
 
 // 7. printLongestWord
 function printLongestWord(arr) {
