@@ -54,16 +54,35 @@ function sumArray(arr) {
 // 6.1 checkPrime
 function checkPrime(nums) {
     // YOUR CODE HERE
-}
+    if (nums % 2 == 0 && nums > 2) return false; // even numbers
+    const start = Math.sqrt(nums); // store the square to loop faster
+    for(let i = 3; i <= start; i += 2) { // start from 3, stop at the square, increment in twos
+        if(nums % i === 0) return false; // modulo shows a divisor was found
+    }
+    return true;
+  }
+  console.log(checkPrime(97));
+
     
 
 // 6.2 printPrimes
 function printPrimes(num) {
     // YOUR CODE HERE
-    
+    if (num < 2)
+        return `${num} is not a prime`
+
+
+    for (let x = 2; x < num; x++) {
+        if (num % x === 0) {
+            return `${num} is not a prime number`
+        }
+    }
+    return `${num} is a prime number`
 }
 
 console.log(printPrimes(97));
+    
+
     
 
 
