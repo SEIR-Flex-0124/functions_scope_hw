@@ -16,8 +16,8 @@ console.log(calculateCube(5))
 //     return "aeiou".indexOf(letter) != -1;
 // }
 
-function isAVowel(letter) {
-    if (letter.length === 1 && letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+function isAVowel(letter) { 
+    if (letter.length === 1 && letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' || letter === 'A' || letter === 'E' || letter === 'I' || letter === 'O' || letter === 'U') {
         return letter = true;
     } else {
         return letter = false;
@@ -26,7 +26,9 @@ function isAVowel(letter) {
 console.log(isAVowel("a"))
 console.log(isAVowel("B"))
 console.log(isAVowel("c"))
-console.log(isAVowel("E")) // How do I fix this so that it correctly accepts uppercase letters too?
+console.log(isAVowel("E"))
+
+// How do I adjust this so that I leverage DRY code?
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
