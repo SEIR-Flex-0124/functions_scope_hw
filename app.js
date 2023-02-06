@@ -32,9 +32,12 @@ console.log(isAVowel("E"))
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
+    let words = new Array(word1.length, word2.length);
+    return words;
 }
-
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+console.log(getTwoLengths("San Antonio", "Spurs"));
+console.log(getTwoLengths("Tuscon", "Arizona"));
 // 5. sumArray
 function sumArray(arr) {
     // YOUR CODE HERE
