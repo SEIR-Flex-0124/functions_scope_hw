@@ -6,13 +6,27 @@
 // In order for a function to return a value the function must use the "return" keyword and the function itself must be one that allows for a specific value to be returned (functions that do not return a value will return "void" or "undefined"). The return value can then be leveraged by other functions as necessary.
 // 2. calculateCube
 function calculateCube(num) {
-    // YOUR CODE HERE
+    return num ** 3
 }
+console.log(calculateCube(5))
 
 // 3. isAVowel
+
+// function isAVowel(letter) {
+//     return "aeiou".indexOf(letter) != -1;
+// }
+
 function isAVowel(letter) {
-    // YOUR CODE HERE
+    if (letter.length === 1 && letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+        return letter = true;
+    } else {
+        return letter = false;
+    }
 }
+console.log(isAVowel("a"))
+console.log(isAVowel("B"))
+console.log(isAVowel("c"))
+console.log(isAVowel("E")) // How do I fix this so that it correctly accepts uppercase letters too?
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
