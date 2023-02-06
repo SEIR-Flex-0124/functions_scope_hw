@@ -1,15 +1,21 @@
 // 1.1. What is the difference between a parameter and an argument?
 
+// Parameters are the names within the parenthesis that come after the function delcaration. These variables are what the function is looking to take in, in order to operate. The arguments are the actual values that are passed through the parameters when the function is invoked. 
+
 // 1.2. Within a function, what is the difference between return and console.log?
+
+//Return is the function saying "what am I doing with these arguments? Return then assigns the output of the function to the function name. Return is required in a function in order for it to not return "undefined".
 
 // 1. 3. What are the implications of the ability of a function to return a value?
 
+//To follow the 'DRY' coding principle of not having to repeat code. 
+
 // 2. calculateCube
-function calculateCube(num) {
-    // YOUR CODE HERE
-}
+
+
 
 // 3. isAVowel
+
 function isAVowel(letter) {
     // YOUR CODE HERE
 }
