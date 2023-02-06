@@ -37,13 +37,9 @@ console.log(calculateCube(5));
 // const vowelArray = ["a", "e", "i", "o", "u"];
 
 // function isaVowel2 (letter) {
-// if (vowelArray.includes(letter)) {
-//     return true;
-// } else {
-//     return false;
+//    return vowelArray.includes(letter)
 // }
-// }
-// console.log(isaVowel2("b"));
+// console.log(isaVowel2("e"));
 
 //Version 3 
 
@@ -62,10 +58,15 @@ function isAVowel3(letter) {
     }
 }
 console.log(isAVowel3("a"));
+
 // 4. getTwoLengths
+
 function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
+    return twoLengthsArr = [word1.length, word2.length]
+
 }
+
+console.log(getTwoLengths("Testing123", "Hellooooooooo, is this thing on?!"));
 
 // 5. sumArray
 function sumArray(arr) {
