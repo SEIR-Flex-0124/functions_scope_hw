@@ -105,13 +105,27 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 // 8. eulerFibo
 function eulerFibo(num) {
     // YOUR CODE HERE
+
 }
 
 // 9. findNeedle
-function findNeedle(arr) {
+function findNeedle(haystack) {
     // YOUR CODE HERE
-}
+    
+    let index;
+  
+    haystack.forEach((currentValue, i) => {
+      if (currentValue === 'needle') {
+        index = i;
+      }
+    });
 
+  return `found the needle at position ${index}`;
+
+
+}
+const haystacknew= ['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'];  
+console.log(findNeedle(haystacknew)); 
 // 10. sumPositive
 function sumPositive(arr) {
     // YOUR CODE HERE
