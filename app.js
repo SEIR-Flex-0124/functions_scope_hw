@@ -51,17 +51,37 @@ console.log(sumArray([50, -20, 173, 5000, 34, 56, 900]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    // YOUR CODE HERE
+    if (num === 1) {
+        return false;
+    } else if (num === 2) {
+        return true;
+    } else {
+        for (i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        } return true;
+    } 
 }
+console.log(checkPrime(3))
+console.log(checkPrime(6))
+console.log(checkPrime(12))
+console.log(checkPrime(2083))
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    // YOUR CODE HERE
+    if (checkPrime === true) {
+        for (i = 0; i <= num; i++)
+        num = [num.push(i)]
+    } return num[i]
 }
+console.log(printPrimes(97))
+// // Write another function called `printPrimes` that will print (console log) all the Primes up to an arbitrary limit. For example, if you invoke your function with `printPrimes(97)`, it will print all the Prime numbers up to and including 97.
+// This function can **call on** the previous `checkPrime` function.
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    // YOUR CODE HERE
+    
 }
 
 // BONUS!
