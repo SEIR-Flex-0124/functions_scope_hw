@@ -10,19 +10,31 @@
 // 2. calculateCube
 function calculateCube(num) {
     // YOUR CODE HERE
-    return num*num*num;
+    return num*num*num;    //n*3
     
 }
  console.log(calculateCube(5));
+
 // 3. isAVowel
-function isAVowel(letter) {
+function isAVowel(alphabet) {
     // YOUR CODE HERE
+    const vowel = [ 'a' , 'e', 'i'];
+  for ( let i  = 0; i < vowel.length; i++ ) {
+    if ( vowel[i] === alphabet.toLowerCase() ) {
+      return true;
+    }
+  }
+  return false;
 }
 
+console.log(isAVowel("a"));
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
+
     // YOUR CODE HERE
+    
 }
+ 
 
 // 5. sumArray
 function sumArray(arr) {
@@ -30,14 +42,20 @@ function sumArray(arr) {
 }
 
 // 6.1 checkPrime
-function checkPrime(num) {
+function checkPrime(nums) {
     // YOUR CODE HERE
 }
+    
 
 // 6.2 printPrimes
 function printPrimes(num) {
     // YOUR CODE HERE
+    
 }
+
+console.log(printPrimes(97));
+    
+
 
 // 7. printLongestWord
 function printLongestWord(arr) {
