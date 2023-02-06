@@ -19,11 +19,49 @@ function calculateCube(num) {
 console.log(calculateCube(5));
 
 // 3. isAVowel
+//I want to preface this code by saying my initial method was to use an array, but a friend explained how arrays function slower by comparing the input to each value before returning anything. But an object will only use 1 comparison with the input, and return a value much more effeciently. 
 
-function isAVowel(letter) {
-    // YOUR CODE HERE
+//Version 1
+
+// function isaVowel1(letter) {
+//     if (letter === "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u") {
+//         return letter = true;
+//     } else 
+//     return letter = false;
+// }
+
+// console.log(isaVowel1("b"));
+
+//Version 2
+
+// const vowelArray = ["a", "e", "i", "o", "u"];
+
+// function isaVowel2 (letter) {
+// if (vowelArray.includes(letter)) {
+//     return true;
+// } else {
+//     return false;
+// }
+// }
+// console.log(isaVowel2("b"));
+
+//Version 3 
+
+function isAVowel3(letter) {
+    const vowelChecker = {
+        a: true,
+        e: true,
+        i: true,
+        o: true,
+        u: true
+    }
+    if (vowelChecker[letter] == true){
+        return letter = true; 
+    } else {
+        return letter = false;
+    }
 }
-
+console.log(isAVowel3("a"));
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
     // YOUR CODE HERE
@@ -66,15 +104,15 @@ function sumPositive(arr) {
     // YOUR CODE HERE
 }
 
-module.exports = {
-    calculateCube,
-    isAVowel,
-    getTwoLengths,
-    sumArray,
-    checkPrime,
-    printPrimes,
-    printLongestWord,
-    eulerFibo,
-    findNeedle,
-    sumPositive
-};
+// module.exports = {
+//     calculateCube,
+//     isAVowel,
+//     getTwoLengths,
+//     sumArray,
+//     checkPrime,
+//     printPrimes,
+//     printLongestWord,
+//     eulerFibo,
+//     findNeedle,
+//     sumPositive
+// };
