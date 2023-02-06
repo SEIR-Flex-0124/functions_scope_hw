@@ -22,14 +22,22 @@ function isAVowel(letter) {
 console.log(isAVowel("a"));
 
 // 4. getTwoLengths
-function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
-}
+// function getTwoLengths(word1, word2) {
+//     string-length( [string] )
+// }
+// console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 // 5. sumArray
 function sumArray(arr) {
-    // YOUR CODE HERE
+    let sumArray = 0
+    for (let i = 0; i < 
+        arr.length; i += 1) {
+            sumArray += arr[i]
+        }
+        return sumArray
 }
+
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
