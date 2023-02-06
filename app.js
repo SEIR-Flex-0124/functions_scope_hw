@@ -13,8 +13,10 @@ console.log(calculateCube(3))
 
 // 3. isAVowel
 function isAVowel(letter) {
-    // YOUR CODE HERE
+    const vow = ["a", "e", "i", "o", "u"];
+    return vow.includes(letter.toLowerCase())
 }
+console.log(isAVowel("a"));
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
