@@ -71,14 +71,22 @@ function printPrimes(num) {
     }
 }
 console.log(printPrimes(97));
-
+// why do I get an undifined after last number
 //!! Question why cant I return i?? only can console.log(i)//
 
 
 // 7. printLongestWord
-// function printLongestWord(arr) {
-//     while (localStorage)
+function printLongestWord(arr){
+let longestWord = " ";
+for (let i = 0; i < arr.length; i++){
+    if(arr[i].length > longestWord.length){
+        longestWord = arr[i];    
+    }
+}
+return longestWord;
+}
 
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
 
 // // BONUS!
 
