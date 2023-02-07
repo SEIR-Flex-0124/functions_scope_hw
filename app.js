@@ -9,7 +9,7 @@
 function calculateCube(num) {
     return Math.pow(num, 3);
 };
-console.log(calculateCube(5));
+console.log(calculateCube(3));
 
 // 3. isAVowel
 function isAVowel(letter) {
@@ -50,8 +50,13 @@ console.log(checkPrime(7));
 // 6.2 printPrimes
 function printPrimes(num) {
     // YOUR CODE HERE
-
+    let primes = [];
+    for(let i = 2; i <= num; i++) {
+        if(checkPrime(i)) primes.push(i);
+    }
+    console.log(primes);   
 }
+printPrimes(100);
 
 // 7. printLongestWord
 function printLongestWord(arr) {
