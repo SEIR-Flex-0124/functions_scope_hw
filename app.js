@@ -75,8 +75,16 @@ printPrimes(100);
 // 7. printLongestWord
 function printLongestWord(arr) {
     // YOUR CODE HERE
+    let longestWord = "";
+    for (let i = 0; i < arr.length; i++) {
+        if( arr[i].length > longestWord.length) {
+            longestWord = arr[i];
+        }
+    }
+    return longestWord;
 }
-
+console.log(printLongestWord(["Mehrzweckkirschentkerngerät", "Armbrust", "Gemeindegrundsteuerveranlagung", "Schifffahrtskapitänsmützenmaterialherstellerdie", "Mehrzweckhalledas", "Feuerwehrrettungshubschraubernotlandeplatzaufseherinder", "Oberpostdirektionsbriefmarkenstempelautomatenmechanikerdas", "Donaudampfschifffahrtselektrizitätenhauptbetriebswerkbauunterbeamtengesellschaft"]));
+//Have fun reading these words :D
 // BONUS!
 
 // 8. eulerFibo

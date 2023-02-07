@@ -112,7 +112,7 @@ This function can **call on** the previous `checkPrime` function.
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
-"Commit 6 - Prime Numbers".
+"Commit 6 - Prime Numbers"
 <hr>
 
 ## 7. Print Longest Word
