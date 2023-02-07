@@ -12,23 +12,23 @@ console.log(calculateCube(5))
 
 // 3. isAVowel
 
-// function isAVowel(letter) {
-//     return "aeiou".indexOf(letter) != -1;
-// }
-
-function isAVowel(letter) { 
-    if (letter.length === 1 && letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' || letter === 'A' || letter === 'E' || letter === 'I' || letter === 'O' || letter === 'U') {
-        return letter = true;
-    } else {
-        return letter = false;
+function isAVowel(letter) {
+    if (typeof letter !== "string" || letter.length !== 1) {
+        return false
     }
+    let vowels = ["a", "e", "i", "o", "u"]
+    for (let i = 0; i < vowels.length; i++) {
+        if (letter.toLowerCase() === vowels[i]) {
+        return true
+        } 
+    }
+    return false
 }
 console.log(isAVowel("a"))
 console.log(isAVowel("B"))
 console.log(isAVowel("c"))
 console.log(isAVowel("E"))
-
-// How do I adjust this so that I leverage DRY code?
+console.log(isAVowel("8"))
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
@@ -70,19 +70,22 @@ console.log(checkPrime(2083))
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    if (checkPrime === true) {
-        for (i = 0; i <= num; i++)
-        num = [num.push(i)]
-    } return num[i]
+    let primeArray = []
+    for (let i = 2; i <= num; i++) {
+        if(checkPrime(i)) console.log(i)
+    }
 }
-console.log(printPrimes(97))
+printPrimes(1000)
+
 // // Write another function called `printPrimes` that will print (console log) all the Primes up to an arbitrary limit. For example, if you invoke your function with `printPrimes(97)`, it will print all the Prime numbers up to and including 97.
 // This function can **call on** the previous `checkPrime` function.
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    
+
 }
+
+// Write a function `printLongestWord` that accepts a single argument, an **array of strings**. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
 
 // BONUS!
 
