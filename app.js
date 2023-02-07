@@ -39,13 +39,32 @@ function sumArray(arr) {
 // 6.1 checkPrime
 function checkPrime(num) {
     // YOUR CODE HERE
+    if (num <= 1){
+        return false;  // CHECKS IF NUM IS POS.
+    }
+    if (num % 2 == 0 && num > 1){
+        return false;  // CHECKS IF NUM IS EVEN
+    } 
+    const sqrt = Math.sqrt(num); // GETTING SQRT OF NUM FOR EFFICIENCY
+    for( let i=3; i<=sqrt; i+=2 ){
+        if( num % i == 0 ) return false;  // CHECKS IF NUM CAN BE DIVIDED W/NO REMAIN.
+    }
+    return true
 }
+console.log(checkPrime(3));
 
 // 6.2 printPrimes
 function printPrimes(num) {
     // YOUR CODE HERE
-}
-
+    let primeArray = []
+    for( let i=3; i<=num; i++ ){
+        if(checkPrime(i)){
+            primeArray.push(i);
+        }
+    }
+    return primeArray;
+ }
+console.log(printPrimes(13));
 // 7. printLongestWord
 function printLongestWord(arr) {
     // YOUR CODE HERE
