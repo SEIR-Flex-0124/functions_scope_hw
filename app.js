@@ -10,7 +10,7 @@
 function calculateCube(num) {
     return num ** 3   
 }
-console.log(calculateCube(4))
+console.log(`number 2: ${calculateCube(4)}`)
 
 
 // 3. isAVowel
@@ -22,57 +22,90 @@ function isAVowel(letter) {
         return false
 }
 
-console.log(isAVowel('i'))
+console.log(`number 3: ${isAVowel('i')}`)
 
 // 4. getTwoLengths
+function getTwoLengths(arr1, arr2) {
+    sum = [arr1.length, arr2.length]
+    return sum
+}
+
+getTwoLengths('Hank', 'Hippopopalous')
+console.log(`number 4: ${getTwoLengths('Hank', 'Hippopopalous')}`)
 
 
 // 5. sumArray
-function sumArray(arr) {
-    // YOUR CODE HERE
+function sumArray (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    return sum
 }
 
-// 6.1 checkPrime
+console.log('number 5: ' + sumArray([1, 2, 3, 4, 5, 6]));
+
+
+// // 6.1 checkPrime
+
 function checkPrime(num) {
-    // YOUR CODE HERE
-}
+    if (num < 2)
+        return false
 
+    for (let i = 2; i < num; i++){
+        if(num % i === 0){
+            return false
+        }
+    }
+    return true
+}
+console.log('number 6: ' + checkPrime(17))
+
+//funcPrintPrime = printPrimes()
 // 6.2 printPrimes
 function printPrimes(num) {
-    // YOUR CODE HERE
+    for(let i = 2; i <= num; i++){
+        if(checkPrime(i)){
+            console.log(i);
+        }
+    }
 }
+console.log(printPrimes(97));
+
+//!! Question why cant I return i?? only can console.log(i)//
+
 
 // 7. printLongestWord
-function printLongestWord(arr) {
-    // YOUR CODE HERE
-}
+// function printLongestWord(arr) {
+//     while (localStorage)
 
-// BONUS!
 
-// 8. eulerFibo
-function eulerFibo(num) {
-    // YOUR CODE HERE
-}
+// // BONUS!
 
-// 9. findNeedle
-function findNeedle(arr) {
-    // YOUR CODE HERE
-}
+// // 8. eulerFibo
+// function eulerFibo(num) {
+//     // YOUR CODE HERE
+// }
 
-// 10. sumPositive
-function sumPositive(arr) {
-    // YOUR CODE HERE
-}
+// // 9. findNeedlels
+// function findNeedle(arr) {
+//     // YOUR CODE HERE
+// }
 
-module.exports = {
-    calculateCube,
-    isAVowel,
-    getTwoLengths,
-    sumArray,
-    checkPrime,
-    printPrimes,
-    printLongestWord,
-    eulerFibo,
-    findNeedle,
-    sumPositive
-};
+// // 10. sumPositive
+// function sumPositive(arr) {
+//     // YOUR CODE HERE
+// }
+
+// module.exports = {
+//     calculateCube,
+//     isAVowel,
+//     getTwoLengths,
+//     sumArray,
+//     checkPrime,
+//     printPrimes,
+//     printLongestWord,
+//     eulerFibo,
+//     findNeedle,
+//     sumPositive
+// };
