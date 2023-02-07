@@ -218,24 +218,38 @@ console.log(eulerFiboSum4Mil(15)); // I'm expecting 188
 console.log(eulerFiboSum4Mil(150)); // I'm expecting an empty array
 
 // 9. findNeedle
-// function findNeedle(arr) {
-    // YOUR CODE HERE
-// }
+function findNeedle(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i].toLowerCase() === 'needle') {
+      return `I found the needle at position ${[i]}`;
+    }
+  }
+  return 'You did not find the needle'
+}
+console.log(findNeedle(['pest', 'buy', 'sequence', 'chain', 'zero'])); // I'm expecting 'You did not find the needle'
+console.log(findNeedle(['traction', 'hen', 'needle', 'acquaintance'])); // I'm expecting `I found the needle at position 2'
+console.log(findNeedle(['reflex', 'equip', 'upset', 'mosaic', 'sample', 'loan', 'needle'])); // I'm expecting `I found the needle at position 6'
 
 // 10. sumPositive
-// function sumPositive(arr) {
-    // YOUR CODE HERE
-// }
+function sumPositive(arr) {
+    
+}
 
-// module.exports = {
-//     calculateCube,
-//     isAVowel,
-//     getTwoLengths,
-//     sumArray,
-//     checkPrime,
-//     printPrimes,
-//     printLongestWord,
-//     eulerFibo,
-//     findNeedle,
-//     sumPositive
-// };
+module.exports = {
+    calculateCube,
+    isAVowel,
+    getTwoLengths,
+    sumArray,
+    checkPrime,
+    printPrimes,
+    printLongestWord,
+    eulerFibo,
+    findNeedle,
+    sumPositive
+};
+
+/*
+Given an array, return the sum of only the positive numbers
+
+[1, -4, 7, 12] => 1 + 7 + 12 = 20
+*/
