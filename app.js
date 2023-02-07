@@ -232,24 +232,14 @@ console.log(findNeedle(['reflex', 'equip', 'upset', 'mosaic', 'sample', 'loan', 
 
 // 10. sumPositive
 function sumPositive(arr) {
-    
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+      if(arr[i] > 0) {
+        sum += arr[i];
+      }
+    }
+    return sum;
 }
-
-module.exports = {
-    calculateCube,
-    isAVowel,
-    getTwoLengths,
-    sumArray,
-    checkPrime,
-    printPrimes,
-    printLongestWord,
-    eulerFibo,
-    findNeedle,
-    sumPositive
-};
-
-/*
-Given an array, return the sum of only the positive numbers
-
-[1, -4, 7, 12] => 1 + 7 + 12 = 20
-*/
+console.log(sumPositive([1, 2, 3])); // I'm expecting 6
+console.log(sumPositive([-10, 0, 4, 30])); // I'm expecting 34
+console.log(sumPositive([-5, -3, -6, -2342])); // I'm expecting 0
