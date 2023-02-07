@@ -39,13 +39,13 @@ console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    if (num % 2 === 0) {
+    if (num % 2 === 0) { //% checks the remainder
         return false;
        } 
        return true;
     
 }
- console.log(checkPrime(9)); //question: 2 is a prime number, but it's divisible by 2 (itself), which works with my code. Is there a better way to code this, so 2 is identified as a prime number?
+ console.log(checkPrime(9)); 
 
 // 6.2 printPrimes
 function printPrimes(num) {
@@ -57,8 +57,15 @@ console.log(printPrimes(97));
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    // YOUR CODE HERE
+    longestWord = "";
+    for(i = 0; i < arr.length; i++){
+        if(arr[i].length > longestWord){
+        longestWord = arr[i]; 
+        }
+    return longestWord;
+    }
 }
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"])); //I keep returning BoJack, 
 
 // BONUS!
 
