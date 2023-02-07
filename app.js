@@ -107,33 +107,135 @@ function printLongestWord(arr) {
   console.log(printLongestWord(['village', 'a', 'smoke', 'chin', 'catalogue'])); // I'm expecting catalogue
   console.log(printLongestWord(['style', 'truck', 'right', 'quiet'])); // I'm expecting style
   console.log(printLongestWord(['window', 'laser', 'helpless', 'see', 'it', 'army', 'onomatopoeia'])); // I'm expecting onomatopoeia
-  
+
 // BONUS!
 
-// 8. eulerFibo
+// 8.1 eulerFibo
+
 function eulerFibo(num) {
-    // YOUR CODE HERE
+  if(num < 0) {
+    return [];
+  } else if(num % 1 !== 0) {
+    return [];
+  } else {
+    let arrOfFibo = [0, 1];
+    for(let i = 2; i < num; i++) {
+        arrOfFibo.push(arrOfFibo[i-1]+arrOfFibo[i-2]);
+    }  
+    return arrOfFibo; 
+  }
 }
+console.log(eulerFibo(-5)); // I'm expecting an empty array
+console.log(eulerFibo(5.425)); // I'm expecting an empty array
+console.log(eulerFibo(7)); // I'm expecting [0, 1, 1, 2, 3, 5, 8]
+console.log(eulerFibo(15)); // I'm expecting [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
+
+// 8.2 eulerFibo
+// I couldn't figure out how to answer the rest of prompt 8 without repeating my code
+function eulerFiboEven(num) {
+  if(num <= 0) {
+    return [];
+  } else if(num % 1 !== 0) {
+    return [];
+  } else {
+    let arrOfFibo = eulerFibo(num);
+    let arrOfFiboEven = [];
+    for (let i = 0; i < arrOfFibo.length; i++) {
+      if(arrOfFibo[i] % 2 === 0 && arrOfFibo[i] !== 0) {
+        arrOfFiboEven.push(arrOfFibo[i]);
+      }
+    }  
+    return arrOfFiboEven; 
+  }
+}
+console.log(eulerFiboEven(2)); // I'm expecting an empty array
+console.log(eulerFiboEven(7)); // I'm expecting [2, 8]
+console.log(eulerFiboEven(15)); // I'm expecting [2, 8, 34, 144]
+
+/*
+Atttempt #1: I used a for loop with a nested for loop with a nested if statement, which seemed to work when I tested it out. I then tried to clean it up.
+function eulerFiboEven(num) {
+  if(num < 0) {
+    return 'You must choose a positive number'
+  } else if(num % 1 !== 0) {
+    return 'You must choose an integer'
+  } else {
+    let arrOfFibo = [0, 1]; 
+    let arrOfFiboEven = [];
+    for(let i = 2; i < num; i++) {
+        arrOfFibo.push(arrOfFibo[i-1]+arrOfFibo[i-2]);
+        for (let i = 0; i < arrOfFibo.length; i++);
+          if(arrOfFibo[i] % 2 === 0) {
+            arrOfFiboEven.push(arrOfFibo[i]);
+        }
+    }  
+    return arrOfFiboEven; 
+  }
+}
+console.log(eulerFiboEven(2)); // I'm expecting an empty array
+console.log(eulerFiboEven(7)); // I'm expecting [2, 8]
+console.log(eulerFiboEven(15)); // I'm expecting [2, 8, 34, 144]
+*/
+
+// 8.3 eulerFibo
+// I couldn't figure out how to answer the rest of prompt 8 without repeating my code
+function eulerFiboSum(num) {
+  if(num <= 0) {
+    return [];
+  } else if(num % 1 !== 0) {
+    return [];
+  } else {
+    let arrOfFiboEven = eulerFiboEven(num);
+    let sumOfFiboEven = 0;
+    for(let i = 0; i < arrOfFiboEven.length; i++) {
+      sumOfFiboEven += arrOfFiboEven[i];
+    }
+    return sumOfFiboEven; 
+  }  
+}
+console.log(eulerFiboSum(2)); // I'm expecting an empty array
+console.log(eulerFiboSum(7)); // I'm expecting 0
+console.log(eulerFiboSum(15)); // I'm expecting 188
+
+// 8.4 eulerFibo
+// I couldn't figure out how to answer the rest of prompt 8 without repeating my code
+function eulerFiboSum4Mil(num) {
+  if(num <= 0) {
+    return [];
+  } else if(num % 1 !== 0) {
+    return [];
+  } else {
+    let sumOfFiboEven = eulerFiboSum(num);
+    if(sumOfFiboEven <= 4000000) {
+      return sumOfFiboEven;
+      }
+    return "You're number is greater than 4 million";
+  }  
+}
+console.log(eulerFiboSum4Mil(2)); // I'm expecting an empty array
+console.log(eulerFiboSum4Mil(7)); // I'm expecting 0
+console.log(eulerFiboSum4Mil(15)); // I'm expecting 188
+console.log(eulerFiboSum4Mil(150)); // I'm expecting an empty array
 
 // 9. findNeedle
-function findNeedle(arr) {
+// function findNeedle(arr) {
     // YOUR CODE HERE
-}
+// }
 
 // 10. sumPositive
-function sumPositive(arr) {
+// function sumPositive(arr) {
     // YOUR CODE HERE
-}
+// }
 
-module.exports = {
-    calculateCube,
-    isAVowel,
-    getTwoLengths,
-    sumArray,
-    checkPrime,
-    printPrimes,
-    printLongestWord,
-    eulerFibo,
-    findNeedle,
-    sumPositive
-};
+// module.exports = {
+//     calculateCube,
+//     isAVowel,
+//     getTwoLengths,
+//     sumArray,
+//     checkPrime,
+//     printPrimes,
+//     printLongestWord,
+//     eulerFibo,
+//     findNeedle,
+//     sumPositive
+// };
