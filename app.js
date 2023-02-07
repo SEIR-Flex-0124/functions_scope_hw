@@ -112,11 +112,55 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 // BONUS!
 
 // 8. eulerFibo
+// [Project Euler problem #2](https://projecteuler.net/problem=2)
+
+// * Write a function that takes a parameter, a number. The function should print the Fibonacci sequence up to that number.
+
+// * Adjust the function to push the **even numbered** values into an array.
+
+// * Adjust the function to return the summed value of the array.
+
+// * Find the sum of the even numbered values that do not exceed four million.
+
 function eulerFibo(num) {
     // YOUR CODE HERE
+    if(num < 2) return 0
+    let firstFibo = 0
+    let secondFibo = 1
+    let firstCopy = 0
+
+    const evenArray = []
+    while(secondFibo < num){
+        if(secondFibo % 2 === 0){
+            evenArray.push(secondFibo);
+        }
+        firstCopy = firstFibo; 
+        firstFibo = secondFibo;
+        secondFibo += firstCopy;
+    }
+    console.log("Even Fibo numbers", evenArray.join(', '));
+    return `Sum of even Fibo numbers: ${evenArray.reduce((a,b) => a + b)}`
+    // let sum = 0
+    // for(let i =0; i < seq.length; i++){
+    //     if(num % 2 === 0){ 
+    //     seq.push(num)
+    //     sum += seq[i];
+    // }}
+    //     return sum
 }
+console.log(eulerFibo(1000));
 
 // 9. findNeedle
+// Can you find the needle in the haystack?
+
+// Write a function `findNeedle()` that takes an array full of junk but contains one `"needle"`
+
+// After your function finds the needle it should return a message (as a string) that says:
+
+// `"found the needle at postition"` plus the index it found the needle so:
+
+// `find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])`
+
 function findNeedle(arr) {
     // YOUR CODE HERE
 }
