@@ -80,7 +80,8 @@ function printPrimes(limit) {
         if (checkPrime(i)) console.log(i);
     }
 }
-console.log(printPrimes(200))
+printPrimes(20)
+
 
 // 7. printLongestWord
 function printLongestWord(arr) {
@@ -113,12 +114,10 @@ function eulerFibo(num) {
     prev = curr; // `prev`is assigned to be the value of `curr`. This way 'prev`will be use in the next iteration of the loop
     curr = sum;  // `curr` is define as teh value of `sum` so as the last number in the sequence, it will be use for the next iteration of the loop
   }
-  // Return the sum of all even numbers in the Fibonacci sequence that do not exceed the input `num`
-  return total;
+  return total; // Return the sum of all even numbers in the Fibonacci sequence that do not exceed the input `num`
 }
 
-// Console.log the result of calling `eulerFibo` with 4 million as the input
-console.log(eulerFibo(4000000));
+console.log(eulerFibo(4000000)); // Console.log the result of calling `eulerFibo` with 4 million as the input
 
 
 // 9. findNeedle
