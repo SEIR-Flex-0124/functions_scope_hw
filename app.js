@@ -70,22 +70,23 @@ console.log(checkPrime(2083))
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    let primeArray = []
     for (let i = 2; i <= num; i++) {
         if(checkPrime(i)) console.log(i)
     }
 }
-printPrimes(1000)
-
-// // Write another function called `printPrimes` that will print (console log) all the Primes up to an arbitrary limit. For example, if you invoke your function with `printPrimes(97)`, it will print all the Prime numbers up to and including 97.
-// This function can **call on** the previous `checkPrime` function.
+printPrimes(97)
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-
+    let longest = "";
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > longest.length) {
+            longest = arr[i];
+        } 
+    } return longest
 }
-
-// Write a function `printLongestWord` that accepts a single argument, an **array of strings**. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+console.log(printLongestWord(["hello", "computer", "understandable", "Incomprehensibility", "Xenotransplantation"]))
 
 // BONUS!
 
