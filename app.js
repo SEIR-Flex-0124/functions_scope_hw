@@ -21,33 +21,39 @@ function isAVowel(letter) {
 }
 console.log(isAVowel("a"));
 
-// 4. getTwoLengths
-// function getTwoLengths(word1, word2) {
+//  4. getTwoLengths
+ function getTwoLengths(word1, word2) {
 //     string-length( [string] )
-// }
+}
 // console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 // 5. sumArray
 function sumArray(arr) {
     let sumArray = 0
-    for (let i = 0; i < 
-        arr.length; i += 1) {
+    for (let i = 0; i < arr.length; i += 1) {
             sumArray += arr[i]
         }
-        return sumArray
+        return sumArray;
 }
-
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    // YOUR CODE HERE
+    if (num % 2 === 0) {
+        return false;
+       } 
+       return true;
+    
 }
+ console.log(checkPrime(9)); //question: 2 is a prime number, but it's divisible by 2 (itself), which works with my code. Is there a better way to code this, so 2 is identified as a prime number?
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    // YOUR CODE HERE
+    for(i = 0; i < num; i++) {
+        if(checkPrime(i)) console.log(i); //Note: calling on my previous function 'checkPrime'. However I'm gettin an undefined as my last result and I'm not sure why?
+    }
 }
+console.log(printPrimes(97));
 
 // 7. printLongestWord
 function printLongestWord(arr) {
