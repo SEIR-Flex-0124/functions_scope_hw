@@ -1,14 +1,20 @@
 // 1.1. What is the difference between a parameter and an argument?
-
+  // Function parameters are the names listed in the functions definitions while arguments are the real values passed to the function. 
+  https://developer.mozilla.org/en-US/docs/Glossary/Parameter
+  // functions are the building blocks of prgorams. Functions are a resusable block of code written to perform a single purpose.
+  // Parameters become local variables inside the function body. 
 // 1.2. Within a function, what is the difference between return and console.log?
-
+  // Console.log will display the parameter in the console. Return statements stop executing the function and return the specified value (not within the console).
 // 1. 3. What are the implications of the ability of a function to return a value?
+  // When a function returns a value, a value is retuned via a return statement to the caller of the function, after being implicity converted to the return type of the function in which it is defined. 
+  // source: https://www.ibm.com/docs/en/zos/2.1.0?topic=specifiers-function-return-values
 
 // 2. calculateCube
 function calculateCube(num) {
   return num ** 3
 }
 console.log(calculateCube(5))
+
 // 3. isAVowel
 function isAVowel(vowel) {
   if (vowel === 'a' || vowel === 'A') {
@@ -17,7 +23,11 @@ function isAVowel(vowel) {
     return false
   }
 }
-console.log(isAVowel("a"))
+// const vow = 'a' // variable 
+// const nonVow = 'b' // variable 
+console.log(isAVowel('a'))
+console.log(isAVowel('b'))
+
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
   // YOUR CODE HERE
