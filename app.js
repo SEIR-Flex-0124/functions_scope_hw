@@ -23,15 +23,16 @@ function isAVowel(vowel) {
     return false
   }
 }
-// const vow = 'a' // variable 
-// const nonVow = 'b' // variable 
+const vow = 'a' // variable 
+const nonVow = 'b' // variable 
 console.log(isAVowel('a'))
 console.log(isAVowel('b'))
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
-  // YOUR CODE HERE
+  return[word1.length, word2.length]
 }
+console.log(getTwoLengths('Hank', 'Hippopopalous'))
 
 // 5. sumArray
 function sumArray(arr) {
