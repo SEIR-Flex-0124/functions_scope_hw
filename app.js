@@ -1,28 +1,40 @@
-// 1.1. What is the difference between a parameter and an argument?
-An argument is local variable in a function. A parameter is a variable that is passed in to be used in the function.
-// 1.2. Within a function, what is the difference between return and console.log?
-console.log will print to the console where as a return will send an element to wherever the function was called.
-// 1. 3. What are the implications of the ability of a function to return a value?
-it allows us to print for example the sum of two numbers given from the user to the screen.
-// 2. calculateCube
+// // 1.1. What is the difference between a parameter and an argument?
+// An argument is local variable in a function. A parameter is a variable that is passed in to be used in the function.
+// // 1.2. Within a function, what is the difference between return and console.log?
+// console.log will print to the console where as a return will send an element to wherever the function was called.
+// // 1. 3. What are the implications of the ability of a function to return a value?
+// it allows us to print for example the sum of two numbers given from the user to the screen.
+// // 2. calculateCube
 function calculateCube(num) {
     // YOUR CODE HERE
+    let total = num * num * num;
+    return total;
 }
 
 // 3. isAVowel
 function isAVowel(letter) {
-    // YOUR CODE HERE
-}
+    // YOUR CODE HERE 
+    return  (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" ) ;
+}          
 
 // 4. getTwoLengths
-function getTwoLengths(word1, word2) {
+function getTwoLengths(word1, word2) { 
     // YOUR CODE HERE
+    return word1.length + word2.length;
+    
+
 }
 
 // 5. sumArray
 function sumArray(arr) {
     // YOUR CODE HERE
+   let total = 0;
+    for(let i = 0; i < arr.length; i++){
+        total += arr[i]
+    }
+    return total;
 }
+//console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
