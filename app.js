@@ -10,17 +10,20 @@ function calculateCube(num) {
 }
 console.log(calculateCube(3))
 
-// // 3. isAVowel
-// function isAVowel(letter) {
-//     if (letter.toLowerCase() === 'a' || letter.toLowerCase() === 'e' || letter.toLowerCase() === 'i' || letter.toLowerCase() === 'o' || letter.toLowerCase() === 'u') return true;
-//     return false;
-// }
+// 3. isAVowel
+function isAVowel(letter) {
+    if (letter.toLowerCase() === 'a' || letter.toLowerCase() === 'e' || letter.toLowerCase() === 'i' || letter.toLowerCase() === 'o' || letter.toLowerCase() === 'u') return true;
+    return false;
+}
+console.log(isAVowel('a'));   //expecting true
 
-// // 4. getTwoLengths
-// function getTwoLengths(word1, word2) {
-//     return [word1.length, word2.length];
-// }
-// console.log(getTwoLengths('array', 'object')); // I'm expecting [5, 6]
+
+// 4. getTwoLengths
+function getTwoLengths(word1, word2) {
+    return [word1.length, word2.length];
+}
+console.log(getTwoLengths('array', 'object')); // I'm expecting [5, 6]
+
 
 // // 5. sumArray
 // function sumArray(arr) {
