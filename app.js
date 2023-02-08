@@ -77,7 +77,15 @@ console.log((23))
 // 7. printLongestWord
 function printLongestWord(arr) {
     // YOUR CODE HERE
-}
+    let longestWord = "";
+     for (let i = 0; i < arr.length; i++) {
+       if(longestWord.length < arr[i].length) {
+         longestWord = arr[i];
+       }
+     }
+     return longestWord;
+   }
+console.log(printLongestWord(['package', 'wrecking', 'avengers', 'iron', 'captain']));
 
 // BONUS!
 
