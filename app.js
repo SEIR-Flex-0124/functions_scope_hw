@@ -53,16 +53,16 @@ function sumArray(arr) {
 console.log(sumArray([1, 2, 3, 4, 5, 6])) //expecting 21
 
 // 6.1 checkPrime
-function checkPrime(num) {
-  let prime = 0
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] % 1 === 0) {
-    }
-    prime += num[i]
-  }
-  return prime
-}
-console.log(checkPrime(5))
+// function checkPrime(num) {
+//   let prime = 0
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] % 1 === 0) {
+//     }
+//     prime += num[i]
+//   }
+//   return prime
+// }
+// console.log(checkPrime(5))
 
 // 6.2 printPrimes
 function printPrimes(num) {
@@ -71,8 +71,19 @@ function printPrimes(num) {
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-  // YOUR CODE HERE
+  let maxLength = 0;
+  let longestWord = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > maxLength) {
+      maxLength = arr[i].length;
+      longestWord = arr[i];
+    }
+  }
+  return longestWord
 }
+
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
 
 // BONUS!
 
@@ -91,15 +102,15 @@ function sumPositive(arr) {
   // YOUR CODE HERE
 }
 
-module.exports = {
-  calculateCube,
-  isAVowel,
-  getTwoLengths,
-  sumArray,
-  checkPrime,
-  printPrimes,
-  printLongestWord,
-  eulerFibo,
-  findNeedle,
-  sumPositive
-}
+// module.exports = {
+//   calculateCube,
+//   isAVowel,
+//   getTwoLengths,
+//   sumArray,
+//   checkPrime,
+//   printPrimes,
+//   printLongestWord,
+//   eulerFibo,
+//   findNeedle,
+//   sumPositive
+// }
