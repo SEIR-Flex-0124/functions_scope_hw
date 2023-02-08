@@ -80,15 +80,28 @@ function sumArray(arr) {
 
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
-// 6.1 checkPrime
+// 6.1 checkPrime 
 function checkPrime(num) {
-    // YOUR CODE HERE
-}
+    for (i = 2; i < Math.sqrt(num); i++) { 
+        if (num % i == 0) { 
+            return false;
+        } else {
+            return true;
+        }
+    }
+        }
+    
+// console.log(checkPrime(7));
+
+// I struggled with developing the logic for line 86 on my own. Admittedly not very good at math - needed a reminder of what a prime number even is. I pulled line 86 from https://studymaths.co.uk/topics/checkIfPrime.php#:~:text=var%20isPrime%20%3D%20true%3B,exactly%2C%20n%20cannot%20be%20prime.&text=%2F%2F%20Finally%20return%20whether%20n%20is%20prime%20or%20not. 
+//I was close, but seeing how they did it connected the missing piece. I do fully understand how it works. The loop starts at 2 and takes the square root of the number entered as the breaking point, adding 1 for each time it runs. The conditional statement says if the number entered divided by i (starting with 2) has a remainder equal to 0, then it is not prime, return false. Continue running the loop, starting from 2, until you reach the square root of the number entered, test that one as well, then stop. I think(hope) this was a math struggle, and not so much a coding struggle. 
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    // YOUR CODE HERE
+    console.log(checkPrime(num))
 }
+
+printPrimes(97)
 
 // 7. printLongestWord
 function printLongestWord(arr) {
