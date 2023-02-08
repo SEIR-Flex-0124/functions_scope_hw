@@ -138,7 +138,7 @@ function findNeedle(arr) {
     console.log(`i found the need at position ${idx}`)
     return // YOUR CODE HERE
 }
-
+// I looked up filter() first, and then found findIndex()
 findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']) // 5
 // Should return:
 // `"found the needle at position 5"`
@@ -147,8 +147,21 @@ findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']) //
 
 // 10. sumPositive
 function sumPositive(arr) {
+    let sum = 0;
+    for (i=0;i<arr.length;i++){
+        if (arr[i] > 0){
+            sum += arr[i];
+        }
+    }
+    console.log(sum);
+    return
     // YOUR CODE HERE
 }
+
+sumPositive([1,-4,7,12]);
+
+`[1, -4, 7, 12] => 1 + 7 + 12 = 20`
+
 
 // module.exports = {
 //     calculateCube,
