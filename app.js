@@ -8,6 +8,8 @@
 function calculateCube(num) {
     return num ** 3
 }
+console.log(calculateCube(3))
+console.log(calculateCube(2))
 console.log(calculateCube(5))
 
 // 3. isAVowel
@@ -24,10 +26,10 @@ function isAVowel(letter) {
     }
     return false
 }
+console.log(isAVowel("o"))
 console.log(isAVowel("a"))
-console.log(isAVowel("B"))
-console.log(isAVowel("c"))
-console.log(isAVowel("E"))
+console.log(isAVowel("e"))
+console.log(isAVowel("f"))
 console.log(isAVowel("8"))
 
 // 4. getTwoLengths
@@ -35,9 +37,9 @@ function getTwoLengths(word1, word2) {
     let words = new Array(word1.length, word2.length);
     return words;
 }
-console.log(getTwoLengths("Hank", "Hippopopalous"));
-console.log(getTwoLengths("San Antonio", "Spurs"));
-console.log(getTwoLengths("Tuscon", "Arizona"));
+console.log(getTwoLengths("hi", "hey"));
+console.log(getTwoLengths("hungry", "hippopotamus"));
+console.log(getTwoLengths("Tiger", "Supercalifragilisticexpialidocious"));
 
 // 5. sumArray
 function sumArray(arr) {
@@ -46,8 +48,9 @@ function sumArray(arr) {
     sum += arr[i]
     } return sum
 }
-console.log(sumArray([1, 2, 3, 4, 5, 6]));
-console.log(sumArray([50, -20, 173, 5000, 34, 56, 900]));
+console.log(sumArray([3, 2, 1]));
+console.log(sumArray([1, 2, 3, 4, 5]));
+console.log(sumArray([6, 7, 8, 9, 10]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
@@ -63,10 +66,10 @@ function checkPrime(num) {
         } return true;
     } 
 }
-console.log(checkPrime(3))
-console.log(checkPrime(6))
-console.log(checkPrime(12))
-console.log(checkPrime(2083))
+console.log(checkPrime(13))
+console.log(checkPrime(7))
+console.log(checkPrime(36))
+console.log(checkPrime(23))
 
 // 6.2 printPrimes
 function printPrimes(num) {
@@ -74,7 +77,9 @@ function printPrimes(num) {
         if(checkPrime(i)) console.log(i)
     }
 }
-printPrimes(97)
+printPrimes(9);
+printPrimes(23);
+printPrimes(125);
 
 // 7. printLongestWord
 function printLongestWord(arr) {
@@ -85,25 +90,68 @@ function printLongestWord(arr) {
         } 
     } return longest
 }
+console.log(printLongestWord(["test", "here"]));
 console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
-console.log(printLongestWord(["hello", "computer", "understandable", "Incomprehensibility", "Xenotransplantation"]))
+console.log(printLongestWord(["hello", "hi", "greetings"]))
+console.log(printLongestWord(["a", "be", "see"]))
 
 // BONUS!
 
-// 8. eulerFibo
 function eulerFibo(num) {
-    // YOUR CODE HERE
-}
+    let fibNum1 = 0, fibNum2 = 1, nextNum;
+    nextNum = fibNum1 + fibNum2;
+    while (nextNum <= num) {
+        console.log(nextNum);
+        fibNum1 = fibNum2;
+        fibNum2 = nextNum;
+        nextNum = fibNum1 + fibNum2
+    }
+} 
+
+
+console.log(eulerFibo(10))
+
+// * Write a function that takes a parameter, a number. The function should print the Fibonacci sequence up to that number.
+
+// * Adjust the function to push the **even numbered** values into an array.
+
+// * Adjust the function to return the summed value of the array.
+
+// * Find the sum of the even numbered values that do not exceed four million.
+
+
 
 // 9. findNeedle
-function findNeedle(arr) {
-    // YOUR CODE HERE
+
+// Option 1
+
+let haystack = ['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']
+
+function findNeedle(arr){
+    return `found the needle at position ${arr.indexOf('needle')}`
 }
+console.log(findNeedle(haystack));
+
+// Option 2
+
+function findNeedle(arr){
+    return `found the needle at position ${arr.indexOf('needle')}`
+}
+
+console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
 
 // 10. sumPositive
 function sumPositive(arr) {
-    // YOUR CODE HERE
+    let PositiveSumNum = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0){
+            PositiveSumNum += arr[i]
+        }
+    } return PositiveSumNum
 }
+
+console.log(sumPositive([1, -4, 7, 12]));
+console.log(sumPositive([8, 50, -500, 25, -3, 18, -1000]));
 
 module.exports = {
     calculateCube,
