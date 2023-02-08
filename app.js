@@ -129,15 +129,21 @@ function eulerFibo(num) {
     return numArray;
     }
 
-   
-
 console.log(eulerFibo(10));
-
+// for Fibonacci sequence, I refered to stack over flow.
 
 // 9. findNeedle
 function findNeedle(arr) {
-    // YOUR CODE HERE
+    idx = arr.findIndex((word) => word === "needle")
+    console.log(`i found the need at position ${idx}`)
+    return // YOUR CODE HERE
 }
+
+findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']) // 5
+// Should return:
+// `"found the needle at position 5"`
+
+
 
 // 10. sumPositive
 function sumPositive(arr) {
