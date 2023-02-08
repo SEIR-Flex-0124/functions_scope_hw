@@ -70,8 +70,16 @@ console.log(checkPrime(10))
 
 // 6.2 printPrimes
 function printPrimes(num) {
-  // YOUR CODE HERE
+  let primeNums = []
+  for (let i = 2; i < num; i++) {
+    primeNums = primeNums.push(i)
+    if (num % i === 0) {
+    }
+  }
+  return primeNums
 }
+console.log(printPrimes(20))
+//ok i tried this but it didnt work.... not sure where to go from here.
 
 // 7. printLongestWord
 function printLongestWord(arr) {
