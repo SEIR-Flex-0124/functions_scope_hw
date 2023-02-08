@@ -25,17 +25,18 @@ function getTwoLengths(word1, word2) {
 console.log(getTwoLengths('array', 'object')); // I'm expecting [5, 6]
 
 
-// // 5. sumArray
-// function sumArray(arr) {
-//     let sum = 0
-//     for (let i = 0; i < arr.length; i++) {
-//      sum += arr[i];
-//     }
-//     return sum;
-//  }
-//  console.log(sumArray([1, 2, 3])); // I'm expecting 6
+// 5. sumArray
+function sumArray(arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+     sum += arr[i];
+    }
+    return sum;
+ }
+ console.log(sumArray([1, 2, 3, 4, 5])); // I'm expecting 15
 
-//  //or function sumArray(arr) {
+// or I could also do this also
+// function sumArray(arr) {
 //     let sum = 0;
 //     arr.forEach(num => {
 //         sum += num;
