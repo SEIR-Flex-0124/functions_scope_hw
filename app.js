@@ -22,11 +22,17 @@ function getTwoLengths(word1, word2) {
   arr.push(word1.length, word2.length);
   return(arr);
 }
-
+console.log(getTwoLengths("Altair", "Ezio"))
 // 5. sumArray
-function sumArray(arr) {
-    // YOUR CODE HERE
+function sumArray(arr){
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+     sum += arr[i];
+    }
+   return sum;
 }
+console.log(sumArray([8,6,7,5,309])); 
+
 
 // 6.1 checkPrime
 function checkPrime(num) {
