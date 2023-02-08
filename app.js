@@ -105,14 +105,22 @@ printPrimes(97)
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    // YOUR CODE HERE
+    const longestWord = [];
+    for (i = 0; i < arr.length; i++){
+       if (arr[i].length > 0) {
+        longestWord.push(arr[i].length)
+       } return Math.max(longestWord);
+    }
 }
+
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+
+//This code is not the solution to the problem, but was my final progress as I ran out of time. It returns the index of the longest string, but not the actual string. I tried .toString but received NaN returns and would prefer on-time submission. 
 
 // BONUS!
 
 // 8. eulerFibo
 function eulerFibo(num) {
-    // YOUR CODE HERE
 }
 
 // 9. findNeedle
