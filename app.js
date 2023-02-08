@@ -97,10 +97,11 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 
 // // 9. findNeedle
 function findNeedle (arr){
-    return `Found the needle at postion ${arr.indexOf('needle')}`
+    let needleIndex = arr.indexOf('needle')
+    return 'found needle at postion ' + needleIndex
 }
-
-
+findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
+console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
 
 
 // // 10. sumPositive
@@ -113,7 +114,7 @@ function sumPositive(arr){
     }
     return positiveSum
 }
-sumPositive([1,2,3,4,5,6,7,8,9])
+console.log(sumPositive([1,2,3,4,5,6,7,8,9]))
 
 // module.exports = {
 //     calculateCube,
