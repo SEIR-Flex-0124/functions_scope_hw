@@ -24,25 +24,38 @@ function getTwoLengths(word1, word2) {
 }
 console.log(getTwoLengths("Food", "drinks"))
 // 5. sumArray
-function sumArray(arr) {
-    // YOUR CODE HERE
+function sumArray(num) {
+    let sum =0;
+    for(let i = 0; i < num.length; i++){
+        sum +=num[i]
+    }
+    return sum
 }
+console.log(sumArray([4, 5, 7]))
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    // YOUR CODE HERE
+
 }
+console.log(checkPrime(3));
+
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    // YOUR CODE HERE
+    
 }
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    // YOUR CODE HERE
-}
 
+    for(let i = 0; i < arr.length; i++){
+        arr[i]
+        longestWord = arr[i];
+    }
+   
+    return longestWord
+}
+console.log(printLongestWord(["cake", "chocoloate", "butterfinger", "popsickle"]))
 // BONUS!
 
 // 8. eulerFibo
