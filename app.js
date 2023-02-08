@@ -1,22 +1,26 @@
 // 1.1. What is the difference between a parameter and an argument?
-
+//parameter - when we define the function
+//argument - when we call to that method
 // 1.2. Within a function, what is the difference between return and console.log?
-
+//return calls back to a function multiple times
+//console.log prints it that one time
 // 1. 3. What are the implications of the ability of a function to return a value?
-
+//it has the ability to "return" values multiple times and instances throughout the code and not having to be in the same loops but calling back to that function.
 // 2. calculateCube
 function calculateCube(num) {
-    // YOUR CODE HERE
+    return(Math.pow(num, 3));
 }
-
+console.log(calculateCube(6));
 // 3. isAVowel
 function isAVowel(letter) {
-    // YOUR CODE HERE
+    return(letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" || letter == "A" || letter == "E" || letter == "O" || letter == "U")
 }
-
+console.log(isAVowel("E"));
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
+  let arr = []
+  arr.push(word1.length, word2.length);
+  return(arr);
 }
 
 // 5. sumArray
