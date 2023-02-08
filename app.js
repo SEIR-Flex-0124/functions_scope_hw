@@ -53,16 +53,20 @@ function sumArray(arr) {
 console.log(sumArray([1, 2, 3, 4, 5, 6])) //expecting 21
 
 // 6.1 checkPrime
-// function checkPrime(num) {
-//   let prime = 0
-//   for (let i = 0; i < num.length; i++) {
-//     if (num[i] % 1 === 0) {
-//     }
-//     prime += num[i]
-//   }
-//   return prime
-// }
-// console.log(checkPrime(5))
+function checkPrime(num) {
+  if (num < 2) {
+    return false
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false
+    }
+  }
+  return true
+}
+console.log(checkPrime(5))
+console.log(checkPrime(7))
+console.log(checkPrime(10))
 
 // 6.2 printPrimes
 function printPrimes(num) {
@@ -84,6 +88,8 @@ function printLongestWord(arr) {
 }
 
 console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+
+// found this link to be helpful: https://www.educative.io/answers/how-to-find-the-longest-word-in-a-string
 
 // BONUS!
 
