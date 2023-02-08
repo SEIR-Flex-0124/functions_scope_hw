@@ -89,11 +89,18 @@ function checkPrime(num) {
 console.log(checkPrime(7));
 
 
-// 6.2 printPrimes
+// 6.2 printPrimes 
+// Write another function called `printPrimes` that will print (console log) all the Primes up to an arbitrary limit. For example, if you invoke your function with `printPrimes(97)`, it will print all the Prime numbers up to and including 97.
+// This function can **call on** the previous `checkPrime` function.
+
 function printPrimes(num) {
     // YOUR CODE HERE
+    const primeArray = []  // empty array for list of prime numbers
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++){  // math to find prime numbers and iterate through
+        if(num % i === 0) primeArray.push(num.length);
+    }
 }
-
+console.log(printPrimes(97));
 // 7. printLongestWord
 // write a function `printLongestWord` that accepts a single argument, an **array of strings**. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
 
@@ -161,9 +168,14 @@ console.log(eulerFibo(1000));
 
 // `find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])`
 
+const hayStack = ['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'];
 function findNeedle(arr) {
     // YOUR CODE HERE
+    return "Found the needle at position " + (arr.indexOf('needle'))
+    
 }
+console.log(findNeedle(hayStack));
+
 
 // 10. sumPositive
 function sumPositive(arr) {
