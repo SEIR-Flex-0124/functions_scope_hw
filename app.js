@@ -69,7 +69,7 @@ function checkPrime(num) {
     // YOUR CODE HERE
 }
 
-console.log(checkPrime(19));
+// console.log(checkPrime(19));
 
 
 // according to my research 1 is not prime number.
@@ -111,14 +111,28 @@ function printLongestWord(arr) {
     // YOUR CODE HERE
 }
 
-console.log(printLongestWord(['apple','orange','banana']))
+// console.log(printLongestWord(['apple','orange','banana']))
 
 // BONUS!
+// * Write a function that takes a parameter, a number. The function should print the Fibonacci sequence up to that number.
+// * Adjust the function to push the **even numbered** values into an array.
+// * Adjust the function to return the summed value of the array.
+// * Find the sum of the even numbered values that do not exceed four million.
 
 // 8. eulerFibo
 function eulerFibo(num) {
-    // YOUR CODE HERE
-}
+    let numArray = [1,2];
+    for (i=2;i<=num;i++){
+        numArray[i] = numArray[i-1] + numArray[i-2];
+        numArray.push(numArray[i]);
+    }
+    return numArray;
+    }
+
+   
+
+console.log(eulerFibo(10));
+
 
 // 9. findNeedle
 function findNeedle(arr) {
@@ -130,18 +144,18 @@ function sumPositive(arr) {
     // YOUR CODE HERE
 }
 
-module.exports = {
-    calculateCube,
-    isAVowel,
-    getTwoLengths,
-    sumArray,
-    checkPrime,
-    printPrimes,
-    printLongestWord,
-    eulerFibo,
-    findNeedle,
-    sumPositive
-};
+// module.exports = {
+//     calculateCube,
+//     isAVowel,
+//     getTwoLengths,
+//     sumArray,
+//     checkPrime,
+//     printPrimes,
+//     printLongestWord,
+//     eulerFibo,
+//     findNeedle,
+//     sumPositive
+// };
 
 
 
