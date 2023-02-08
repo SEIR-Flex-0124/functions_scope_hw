@@ -44,36 +44,29 @@ function sumArray(arr) {
 //     return sum;
 // }
 
-// // 6.1 checkPrime
-// function checkPrime(num) {
-//     if(num < 0) {
-//         return 'You must choose a positive number'
-//       } else if(num % 1 !== 0) {
-//         return 'You must choose an integer'
-//       } else if(num === 0 || num === 1) {
-//         return false;
-//       } else {
-//          for(let i = 2; i < num; i++) {
-//             if(num % i === 0) {
-//             return false;
-//         } 
-//       }
-//       return true;
-//      } 
-//     }
-//     console.log(checkPrime(-10)); // I'm expecting 'You must choose a positive number'
+
+
+// 6.1 checkPrime
+function checkPrime(num) {
+    for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+        if (num % i === 0) return false;
+    }
+    return num > 1;
+    }
+    console.log(checkPrime(3));  //expecting true
+
 
 // // 6.2 printPrimes
-// function printPrimes(num) {
-//     let arrOfPrimes = [];
-//     for(let i = 2; i <= num; i++) {
-//       if(checkPrime(i)) {
-//         arrOfPrimes.push(i);
-//       }
-//     }
-//     return arrOfPrimes;
-//   }
-//   console.log(printPrimes(1)); // I'm expecting an empty array
+function printPrimes(num) {
+    let prime = [];
+    for(let i = 2; i <= num; i++) {
+      if(checkPrime(i)) {
+        prime.push(i);
+      }
+    }
+    return prime;
+  }
+  console.log(printPrimes(5)); // I'm expecting [2, 3, 5]
 
 // // 7. printLongestWord
 // function printLongestWord(arr) {
