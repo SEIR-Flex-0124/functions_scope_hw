@@ -36,11 +36,21 @@ console.log(isAVowel('b')) //expecting false
 // console.log(isAVowel(a))
 // //however this did not run???
 
+// below is how katie did it during the review:
+// function isAVowel(vowel) {
+//     return "aeiou".includes(letter.toLowercase());
+// console.log(isAVowel('b')) //expecting false
+
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
   return [word1.length, word2.length]
 }
 console.log(getTwoLengths('Hank', 'Hippopopalous'))
+
+// below is how katie did it during the review:
+// // function getTwoLengths(word1, word2) {
+//     return [word1.length, word2.length]
+// console.log(getTwoLengths('Hank', 'Hippopopalous'))
 
 // 5. sumArray
 function sumArray(arr) {
@@ -51,6 +61,11 @@ function sumArray(arr) {
   return sum
 }
 console.log(sumArray([1, 2, 3, 4, 5, 6])) //expecting 21
+
+// below is how katie did it during the review:
+// let sum = arr.reduce((acc, curr) => acc + curr)
+// console.log(sumArray([1, 2, 3, 4, 5, 6])) //expecting 21
+//acc=accumulator, the value that gets returned... callback func is saying acc = acc + curr; ... curr means current. acc can also be thought of as sum of the callback values; can replace acc with sum...//
 
 // 6.1 checkPrime
 function checkPrime(num) {
@@ -68,6 +83,16 @@ console.log(checkPrime(5))
 console.log(checkPrime(7))
 console.log(checkPrime(10))
 
+// below is how katie did it during the review:
+// function checkPrime(num) {
+// for (let i = 2; i < num; i++) {
+//   if (num % i === 0) {
+//     return false
+//   }
+// }
+// return true
+// console.log(checkPrime(21))
+
 // 6.2 printPrimes
 function printPrimes(num) {
   let primeNums = []
@@ -80,22 +105,77 @@ function printPrimes(num) {
 }
 console.log(printPrimes(20))
 //ok i tried this but it didnt work.... not sure where to go from here.
+// // below is how katie did it during the review:
+// function printPrimes(num) {
+// for (let i = 2; i < num; i++) {
+//   if (checkPrime(i)) {
+//     console.log{i}
+//   }
+// }
+// }
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-  let maxLength = 0;
-  let longestWord = '';
+  let maxLength = 0
+  let longestWord = ''
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].length > maxLength) {
-      maxLength = arr[i].length;
-      longestWord = arr[i];
+      maxLength = arr[i].length
+      longestWord = arr[i]
     }
   }
   return longestWord
 }
 
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+console.log(
+  printLongestWord([
+    'BoJack',
+    'Princess',
+    'Diane',
+    'a',
+    'Max',
+    'Peanutbutter',
+    'big',
+    'blob'
+  ])
+)
+
+// // below is how katie did it during the review:
+// function printLongestWord(arr) {
+// let longestWord = ''
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i].length > longestWord.length) {
+//     longestWord = arr[i]
+//   }
+// }
+// return longestWord;
+// }
+// console.log(
+//   printLongestWord([
+//     'BoJack',
+//     'Princess',
+//     'Diane',
+//     'a',
+//     'Max',
+//     'Peanutbutter',
+//     'big',
+//     'blob'
+//   ])
+// --or-- using a reduce statement
+// // function printLongestWord(arr) {
+//   let longestWord = arr.reduce(acc, curr) => {
+//     if (curr.length > acc.length) {
+//       acc = curr;
+//     }
+//     return acc;
+//   }, "")
+//   return longestWord;
+// }
+// return longestWord;
+// }
+// console.log(
+//   printLongestWord(['BoJack', 'Princess', 'Diane', 'a', 'Max', 'Peanutbutter', 'big', 'blob'])
 
 // found this link to be helpful: https://www.educative.io/answers/how-to-find-the-longest-word-in-a-string
 
