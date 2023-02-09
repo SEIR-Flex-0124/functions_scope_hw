@@ -3,16 +3,16 @@
 // 1.2. Within a function, what is the difference between return and console.log?
 //Return doesn't print out the value, it just defines it or gives it it's value. Console.log will print out our function.
 // 1. 3. What are the implications of the ability of a function to return a value?
-
+//Realized during class that this wasnt' complete. Answer: Are able to reuse the code - follows DRY
 // 2. calculateCube
 function calculateCube(num) {
-    return num*num*num;
+    return num*num*num; //or return num ** 3;
 }
 console.log(calculateCube(5));
 
 // 3. isAVowel
 function isAVowel(letter) {
-    let vowels = ["a", "e", "i", "o", "u"];
+    let vowels = ["a", "e", "i", "o", "u"]; //or return "aeiou".includes{letter.toLowerCase()}; , using the .include method for strings and arrays
     for(i = 0; i < vowels.length; i++) {
     if (letter === vowels[i]) 
         return true;
@@ -23,12 +23,13 @@ console.log(isAVowel("a"));
 
 //  4. getTwoLengths
  function getTwoLengths(word1, word2) {
-//     string-length( [string] )
+    return [word1.length, word2.length];
 }
-// console.log(getTwoLengths("Hank", "Hippopopalous"));
+console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 // 5. sumArray
 function sumArray(arr) {
+    //let sum = arr.reduce((acc, curr) => acc + curr); //acc is accumulater- starts at 0, 
     let sumArray = 0
     for (let i = 0; i < arr.length; i += 1) {
             sumArray += arr[i]
@@ -43,29 +44,37 @@ function checkPrime(num) {
         return false;
        } 
        return true;
+    // for (let i =  2; i <Math.sqrt(num); i++) {
+        //if (num % i === 0) {
+            //return false;
+        //}
+    //return true;
+        }
+       
     
-}
+
  console.log(checkPrime(9)); 
 
 // 6.2 printPrimes
 function printPrimes(num) {
-    for(i = 0; i < num; i++) {
-        if(checkPrime(i)) console.log(i); //Note: calling on my previous function 'checkPrime'. However I'm gettin an undefined as my last result and I'm not sure why?
+    for(i = 0; i <= num; i++) { // for (let i = 2; i < num; i++)
+        if(checkPrime(i))console.log(i);
+            //Note: calling on my previous function 'checkPrime'. However I'm gettin an undefined after all my Primes are printed and I'm not sure why?
     }
 }
 console.log(printPrimes(97));
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    longestWord = "";
-    for(i = 0; i < arr.length; i++){
-        if(arr[i].length > longestWord){
+    let longestWord = "";
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i].length > longestWord.length){
         longestWord = arr[i]; 
         }
     return longestWord;
     }
 }
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"])); //I keep returning BoJack, 
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"])); //I keep returning BoJack?
 
 // BONUS!
 
