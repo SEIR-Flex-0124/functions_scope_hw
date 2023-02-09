@@ -22,6 +22,10 @@ function isAVowel(letter) {
         return false
 }
 
+//method #2 
+// fucntion isAvowel(letter)
+   // return 'aeiou'.includes(letter.toLowerCase());
+
 console.log(`number 3: ${isAVowel('i')}`)
 
 // 4. getTwoLengths
@@ -43,6 +47,9 @@ function sumArray (arr) {
     return sum
 }
 
+//let sum = arr.reduce((acc, curr) => acc + curr);
+// return sum
+
 console.log('number 5: ' + sumArray([1, 2, 3, 4, 5, 6]));
 
 
@@ -60,7 +67,13 @@ function checkPrime(num) {
     return true
 }
 console.log('number 6: ' + checkPrime(17))
-
+//method 2
+//for (let i = 2; i < Math.sqrt(num); i++){
+//     if(num % i === 0){
+//         return false;
+//     }
+//     return false
+// }
 //funcPrintPrime = printPrimes()
 // 6.2 printPrimes
 function printPrimes(num) {
@@ -87,13 +100,34 @@ return longestWord;
 }
 
 console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
-
+//method 2 with reduce
+// let longestWord = arr.reduce((acc, curr) => {
+//     if (curr.length > acc.length){
+//         acc = curr;
+//     }
+//     return acc;
+// })
 // // BONUS!
 
 // // 8. eulerFibo
-// function eulerFibo(num) {
-//     // YOUR CODE HERE
-// }
+function eulerFibo(num) {
+    let x = 1;
+    let y = 2;
+    let z = null;
+    let sum = 0
+
+    while(y <= num){
+        if(y % 2 == 0){
+            sum += y;
+        }
+        z = x + y;
+        x = y;
+        y = z;
+    }
+    return sum
+}
+console.log(eulerFibo(4000000))
+
 
 // // 9. findNeedle
 function findNeedle (arr){
@@ -106,13 +140,13 @@ console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'rand
 
 // // 10. sumPositive
 function sumPositive(arr){
-    let positiveSum = 0
+    let sum = 0;
     for (let i = 0; i < arr.length; i++){
-        if (arr[i] === 2 % 0){
-            positiveSum += arr[i]
+        if (arr[i] % 2 === 0){
+            sum += arr[i];
         }
     }
-    return positiveSum
+    return sum;
 }
 console.log(sumPositive([1,2,3,4,5,6,7,8,9]))
 
