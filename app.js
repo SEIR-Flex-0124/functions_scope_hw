@@ -94,16 +94,16 @@ console.log(checkPrime(10))
 // console.log(checkPrime(21))
 
 // 6.2 printPrimes
-function printPrimes(num) {
-  let primeNums = []
-  for (let i = 2; i < num; i++) {
-    primeNums = primeNums.push(i)
-    if (num % i === 0) {
-    }
-  }
-  return primeNums
-}
-console.log(printPrimes(20))
+// function printPrimes(num) {
+//   let primeNums = []
+//   for (let i = 2; i < num; i++) {
+//     primeNums = primeNums.push(i)
+//     if (num % i === 0) {
+//     }
+//   }
+//   return primeNums
+// }
+// console.log(printPrimes(20))
 //ok i tried this but it didnt work.... not sure where to go from here.
 // // below is how katie did it during the review:
 // function printPrimes(num) {
@@ -182,19 +182,44 @@ console.log(
 // BONUS!
 
 // 8. eulerFibo
+// // below is how katie did it during the review:
 function eulerFibo(num) {
-  // YOUR CODE HERE
+  let x = 1;
+  let y = 2;
+  let z = null;
+  let sum = 0
+  while (y <= num) {
+    if (y % 2 == 0) {
+      sum +=y;
+    }
+    z = x + y;
+    x = y;
+    y = z;
+  }
+  return sum;
 }
+console.log(eulerFibo(4000000))
 
 // 9. findNeedle
-function findNeedle(arr) {
-  // YOUR CODE HERE
-}
+// // below is how katie did it during the review: didnt work on my end...need to look at it again
+// function findNeedle(arr) {
+//     return (`found the needle at position ${arr.indexOf("needle")}`)
+// }
+// console.log(find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
 
+
+// // below is how katie did it during the review:
 // 10. sumPositive
 function sumPositive(arr) {
-  // YOUR CODE HERE
+    let sum = arr.reduce((acc, curr) => {
+      if (curr > 0) {
+          acc += curr
+      }
+      return acc;
+    }, 0)
+    return sum;
 }
+console.log(sumPositive([1, -4, 7, 12]))
 
 // module.exports = {
 //   calculateCube,
