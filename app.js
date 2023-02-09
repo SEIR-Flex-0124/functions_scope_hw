@@ -12,7 +12,17 @@ function calculateCube(num) {
 }
 
 // 3. isAVowel
+console.log(isAVowel("a"));
 function isAVowel(letter) {
+  const vowels =['a','e','i','o','u'];
+  for(var a in vowels){
+
+    if(letter === "a"){
+        return true;
+    } else {
+        return false;
+    }
+}
     // YOUR CODE HERE
 }
 
