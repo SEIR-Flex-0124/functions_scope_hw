@@ -11,6 +11,8 @@ function calculateCube(num) {
     return num*num*num;
 }
 
+
+
 // 3. isAVowel
 console.log(isAVowel("a"));
 function isAVowel(letter) {
@@ -27,13 +29,20 @@ function isAVowel(letter) {
 }
 
 // 4. getTwoLengths
-function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
-}
+// console.log(getTwoLengths.length);
+// function getTwoLengths(word1, word2) {
+//     let word1 = "Taylor";
+//     let word2 = "Frivolous"; 
+//   }
 
 // 5. sumArray
+console.log(sumArray([9, 10, 1]))
 function sumArray(arr) {
-    // YOUR CODE HERE
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
 }
 
 // 6.1 checkPrime
