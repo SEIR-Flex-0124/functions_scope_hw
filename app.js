@@ -51,9 +51,15 @@ function checkPrime(num) {
 }
 
 // 6.2 printPrimes
+console.log(printPrimes(245))
 function printPrimes(num) {
-    // YOUR CODE HERE
-}
+    for(let i = 2; i <= Math.sqrt(num); i++) {
+            if(num % i === 0) return false;
+        }
+        return true;
+    }
+
+
 
 // 7. printLongestWord
 function printLongestWord(arr) {
