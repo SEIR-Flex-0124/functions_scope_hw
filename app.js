@@ -100,16 +100,16 @@ function calculateCube(num) {
         // YOUR CODE HERE
     }
     
-    module.exports = {
-        calculateCube,
-        isAVowel,
-        getTwoLengths,
-        sumArray,
-        checkPrime,
-        printPrimes,
-        printLongestWord,
-        eulerFibo,
-        findNeedle,
-        sumPositive
-    };
+    // module.exports = {
+    //     calculateCube,
+    //     isAVowel,
+    //     getTwoLengths,
+    //     sumArray,
+    //     checkPrime,
+    //     printPrimes,
+    //     printLongestWord,
+    //     eulerFibo,
+    //     findNeedle,
+    //     sumPositive
+    // };
     
