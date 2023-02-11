@@ -62,9 +62,45 @@ function printPrimes(num) {
 
 
 // 7. printLongestWord
-function printLongestWord(arr) {
-    // YOUR CODE HERE
-}
+function printLongestWord(arr){
+    let words = arr.split(' ');
+    let maxLength = 0;
+    let longestWord = '';
+  
+    for (let i = 0; i < words.length; i++) {
+      if (words[i].length > maxLength) {
+        maxLength = words[i].length;
+        longestWord = words[i];
+      }
+    }
+    console.log(longestWord);git 
+  
+  }
+  
+  printLongestWord('my name is Omolola')
+  ;
+//    let arrSplit = arr.split('');
+//    let longestWord = 0;
+//    for(let i =0; i<arrSplit.length; i++){
+//     if(arrSplit[i].length > longestWord){
+//         longestWord =arrSplit[i].length;
+//     }
+//    } 
+//    return longestWord;
+
+
+// let max = 0;
+//     let start = 0;
+//     let map = {};
+//     for (let i = 0; i < start.length; i++) {
+//         if (map[s[i]] > start) {
+//             start = map[s[i]]
+//         }
+//         map[s[i]] = i
+//         max = Math.max(max, i - start + 1)
+//     }
+//     return max
+// }
 
 // BONUS!
 
