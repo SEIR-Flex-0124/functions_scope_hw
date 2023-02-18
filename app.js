@@ -48,18 +48,23 @@ function sumArray(arr) {
     return sum;
 }
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
-console.log(sumArray([2,3]));
-console.log(sumArray([8,10,2]));
+console.log(sumArray([2, 3]));
+console.log(sumArray([8, 10, 2]));
 
 // // 6.1 checkPrime
 function checkPrime(num) {
-    if (num < 2)
-        for (let i = 2, j = Math.dqrt(num); i <= j; i++) {
-            if (num % i === 0) return false;
-        }
-    return num > 1;
+    if (num < 2) return false;
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
 }
-console.log(checkPrime(41));
+console.log(checkPrime(0));
+console.log(checkPrime(2));
+console.log(checkPrime(7));
+console.log(checkPrime(10));
+
 
 // YOUR CODE HERE
 // }
