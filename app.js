@@ -77,18 +77,22 @@ function printPrimes(num) {
 printPrimes(97);
 
 // // 7. printLongestWord
-function printLongestWord(arr) {
-    //     // YOUR CODE HERE
-    let longest = " ";
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > longest.length) {
-            longest = arr[i];
+function printLongestWord(strArr) {
+    if(typeof strArr !== "object" || typeof strArr[0] !== "string") {
+        return "please input an array of strings"
+    }
 
+    let longest = "";
+    for (let i = 0; i < strArr.length; i++) {
+        if (strArr[i].length > longest.length) {
+            longest = strArr[i];
         }
     }
     return longest;
 }
-console.log(printLongestWord("he only way to make it is to study")
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+console.log(printLongestWord("This is my test"));
+
 
     // }
 
@@ -121,4 +125,4 @@ console.log(printLongestWord("he only way to make it is to study")
     //     findNeedle,
     //     sumPositive
     // ;}ference between a parameter and an argument?
-)
+
