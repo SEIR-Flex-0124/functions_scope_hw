@@ -131,7 +131,7 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 The commit message should read: <br>
 "Commit 7 - Longest Word".
 <hr>
-
+git commit -m 
 ---
 
 ### Bonus
