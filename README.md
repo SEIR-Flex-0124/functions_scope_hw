@@ -139,8 +139,8 @@ The commit message should read: <br>
 ## Project Euler Problem
 [Project Euler problem #2](https://projecteuler.net/problem=2)
 
-* Write a function that takes a parameter, a number. The function should print the Fibonacci sequence up to that number.
 
+* Write a function that takes a parameter, a number. The function should print the np
 * Adjust the function to push the **even numbered** values into an array.
 
 * Adjust the function to return the summed value of the array.

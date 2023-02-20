@@ -29,11 +29,17 @@ function isAVowel(letter) {
 }
 
 // 4. getTwoLengths
-// console.log(getTwoLengths.length);
-// function getTwoLengths(word1, word2) {
-//     let word1 = "Taylor";
-//     let word2 = "Frivolous"; 
-//   }
+console.log(getTwoLengths('come','laughter'));
+
+function getTwoLengths(str1,str2) {
+    const arr =[];
+for (var i = 0; i<arguments.length; i++) {
+    arr.push(arguments[i].length);
+}
+return arr;
+}
+
+
 
 // 5. sumArray
 console.log(sumArray([9, 10, 1]))
@@ -46,9 +52,19 @@ function sumArray(arr) {
 }
 
 // 6.1 checkPrime
+console.log(checkPrime(7))
 function checkPrime(num) {
-    // YOUR CODE HERE
+    if (num == 2)
+    return true;
+    for(i=2;i<=Math.sqrt(num);i++)
+    {
+        if (num % i ==0)
+        return false;
+    }
+    return true;
 }
+    // YOUR CODE HERE
+
 
 // 6.2 printPrimes
 console.log(printPrimes(245))
@@ -73,49 +89,51 @@ function printLongestWord(arr){
         longestWord = words[i];
       }
     }
-    console.log(longestWord);git 
+    console.log(longestWord);
   
   }
   
   printLongestWord('my name is Omolola')
   ;
-//    let arrSplit = arr.split('');
-//    let longestWord = 0;
-//    for(let i =0; i<arrSplit.length; i++){
-//     if(arrSplit[i].length > longestWord){
-//         longestWord =arrSplit[i].length;
-//     }
-//    } 
-//    return longestWord;
-
-
-// let max = 0;
-//     let start = 0;
-//     let map = {};
-//     for (let i = 0; i < start.length; i++) {
-//         if (map[s[i]] > start) {
-//             start = map[s[i]]
-//         }
-//         map[s[i]] = i
-//         max = Math.max(max, i - start + 1)
-//     }
-//     return max
-// }
 
 // BONUS!
 
 // 8. eulerFibo
+console.log(eulerFibo(100))
+
 function eulerFibo(num) {
+    let temp,a =0,b =1, sum =0;
+    while (num > b) {
+        if (b% 2 === 0) {
+            sum += b;
+        };
+        temp = a;
+        a = b;
+        b += temp;
+    };
+    return sum;
     // YOUR CODE HERE
 }
 
 // 9. findNeedle
+console.log(findNeedle(['lola', 200, 'sugar', true, 'needle', 4000]));
+
 function findNeedle(arr) {
+    return arr.indexOf('needle');
     // YOUR CODE HERE
 }
 
+
 // 10. sumPositive
+console.log(sumPositive([-1, 28, -24, 15] ));
+
 function sumPositive(arr) {
+    let sum = 0;
+    for (let i = 0; i< arr.length; i++) {
+        if (arr[i] > 0) sum += arr[i]
+    
+    }
+    return sum
     // YOUR CODE HERE
 }
 
