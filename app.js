@@ -1,8 +1,10 @@
 // 1.1. What is the difference between a parameter and an argument?
 
+
 // Arguments declare the values within a function where as a parameter defines the variable after the function is declared.
 
 // // 1.2. Within a function, what is the difference between return and console.log?
+
 
 // console.log is a function used to print information to the console and return is a call to pass some value back up to wgere call was matchMedia.apply
 
